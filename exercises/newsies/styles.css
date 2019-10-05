@@ -1,0 +1,82 @@
+h1 {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 100px;
+    text-align: center;
+    border-bottom: 10px double black;
+    color: slategrey;
+    margin: 0px;
+}
+h2 {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 50px;
+    text-align: center;
+    color: navy;
+}
+img {
+    display: block;
+    width: 90%;
+    float: center;
+    padding: 25px;
+}
+p {
+    /* column-count: 3;
+    column-gap: 20px;
+    column-rule: 2px solid slategrey; */
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 18px;
+    line-height: 30px;
+    padding: 15px;
+}
+p.class2 {
+    padding: 15px;
+    border-bottom: 2px dotted black;
+}
+.content-box {
+    column-count: 3;
+    column-gap: 50px;
+    column-rule: 4px solid slategrey;
+}
+a:link {
+    text-decoration: none;
+    padding: 15px;
+}
+a:hover {
+    color: red;
+}
+a {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+h1.classifieds {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 100px;
+    text-align: center;
+    border-bottom: 10px double black;
+    color: black;
+    margin: 30px;
+    padding-bottom: 30px;
+}
+h3 {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 25px;
+    text-align: center;
+    margin-top: 45px;
+}
+div.classifieds {
+    padding: 60px;
+    border-top: 5px solid black;
+}
+div.columns {
+    column-count: 3;
+    column-gap: 50px;
+    column-rule: 4px solid slategrey;
+}
+/* div.address {
+    font-family: 'Times New Roman', Times, serif;
+    padding-top: 15px;
+}
+div.quote {
+    font-family: 'Times New Roman', Times, serif;
+    font-style: italic;
+    padding-top: 15px;
+} */

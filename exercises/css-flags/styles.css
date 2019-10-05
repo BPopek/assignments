@@ -1,0 +1,174 @@
+* {
+    box-sizing: border-box;
+    font-size: 0px;
+}
+.full-white {
+    background-color: white;
+    width: 99%;
+    height: 200px;
+}
+.france-blue {
+    background-color: blue;
+    display: inline-block;
+    width: 100px;
+    border-left: 2px solid white;
+    border-top: 2px solid white;
+    border-bottom: 2px solid white;
+    height: 200px;
+}
+.france-white {
+    background-color: white;
+    display: inline-block;
+    width: 100px;
+    border-top: 2px solid white;
+    border-bottom: 2px solid white;
+    height: 200px;
+}
+.france-red {
+    background-color: red;
+    display: inline-block;
+    width: 100px;
+    border-right: 2px solid white;
+    border-top: 2px solid white;
+    border-bottom: 2px solid white;
+    height: 200px;
+}
+.germ-black {
+    background-color: black;
+    /* display: inline-block; */
+    width: 300px;
+    height: 75px;
+}
+.germ-red {
+    background-color: red;
+    /* display: inline-block; */
+    width: 300px;
+    height: 75px;
+}
+.germ-yellow {
+    background-color: gold;
+    /* display: inline-block; */
+    width: 300px;
+    height: 75px;
+}
+.mad-white {
+    background-color: white;
+    display: inline-block;
+    width: 100px;
+    height: 300px;
+}
+.mad-red {
+    background-color: red;
+    display: inline-block;
+    vertical-align: top;
+    width: 200px;
+    height: 150px;
+    vertical-align: top;    
+}
+.mad-green {
+    background-color: green;
+    display: inline-block;
+    width: 200px;
+    height: 150px;
+    vertical-align: bottom;
+}
+.switz-red-sq{
+    background-color: red;
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+
+}
+.switz-red-tall{
+    background-color: red;
+    display: inline-block;
+    width: 50px;
+    height: 75px;
+}
+.switz-red-wide{
+    background-color: red;
+    display: inline-block;
+    width: 75px;
+    height: 50px;
+}
+.switz-red-tall-wide{
+    background-color: red;
+    display: inline-block;
+    width: 75px;
+    height: 75px;
+}
+.switz-white-sq{
+    background-color: white;
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+
+}
+.switz-white-tall{
+    background-color: white;
+    display: inline-block;
+    width: 50px;
+    height: 75px;
+}
+.switz-white-wide{
+    background-color: white;
+    display: inline-block;
+    width: 75px;
+    height: 50px;
+}
+.swd-blue-srect{
+    background-color: blue;
+    display: inline-block;
+    width: 200px;
+    height: 200px;
+}
+.swd-yel-rect{
+    background-color: gold;
+    display: inline-block;
+    width: 100px;
+    height: 200px;
+}
+.swd-blue-lrect{
+    background-color: blue;
+    display: inline-block;
+    width: 400px;
+    height: 200px;
+}
+.swd-yel-line{
+    background-color: gold;
+    display: inline-block;
+    width: 700px;
+    height: 100px;
+}
+.gamibia-red{
+    background-color: red;
+    width: 500px;
+    height: 100px;
+}
+.gamibia-blue{
+    background-color: navy;
+    width: 500px;
+    height: 75px;
+    margin: 20px 0px 20px 0px
+}
+.gamibia-green{
+    background-color: darkgreen;
+    width: 500px;
+    height: 100px;
+}
+.japan-white{
+    background-color: white;
+    width: 500px;
+    height: 300px;
+    border: 2px solid black
+}
+.japan-red{
+    background-color: red;
+    position: relative;
+    /* vertical-align: center; */
+    width: 100px;
+    height: 100px;
+    border-radius: 75px;
+    transform: translate(200%,-200%);
+
+}

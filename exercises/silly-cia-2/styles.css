@@ -1,0 +1,39 @@
+h1 {
+    color: darkgreen;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    text-align: center;
+    font-size: 50px;
+}
+h2 {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    text-align: center;
+    font-size: 35px;
+}
+p {
+    line-height: 25px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 20px;
+    line-height: 35px;
+}
+img {
+    float: left;
+    padding: 20px;
+}
+a:link {
+    text-decoration: none;
+}
+a:hover {
+    text-decoration: underline;
+}
+p.link {
+    text-transform: uppercase;
+}
+li {
+    font-size: 20px;
+    line-height: 35px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+a {
+    font-size: 20px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
