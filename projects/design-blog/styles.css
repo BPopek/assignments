@@ -1,0 +1,64 @@
+.topNav {
+    background-color: grey;
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+.topNav a {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    float: left;
+    display: block;
+    color: lightsteelblue;
+    text-align: center;
+    padding: 10px 50px;
+    text-decoration: none;
+}
+.topNav a:hover {
+    background: #4a4a4a;
+    color: lightsalmon;
+
+}
+body {
+    padding: 20px;
+    background: #f1f1f1;
+}
+.space {
+    margin-top: 100px;
+}
+.card {
+    background-color: white;
+    padding: 20px;
+    margin-top: 20px;
+  }
+h1 {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 40px;
+    color: darkslateblue;
+    text-align: center;
+
+}
+h2 {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 25px;
+    text-align: center;
+    color: darkslateblue;
+}
+h3 {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+    color: black;
+    font-style: italic;
+    text-align: right;
+}
+p {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+    color: black;
+    text-indent: 20px;
+}
+img {
+    float: left;
+    margin-right: 25px;
+    margin-bottom: 10px;
+}

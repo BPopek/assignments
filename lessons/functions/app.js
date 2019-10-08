@@ -13,7 +13,7 @@
 
 // scoping
 // var - will scope to curly brackets - don't use anymore
-// let - will scope to any brackets. Looks locally first and then globally (beyond current        brackets)
+// let - will scope to any brackets. Looks locally first and then globally (beyond current brackets). Use when name will change.
 // const - use for complex data types: arrays/objects. Used when name will never change (use let if name will change).
 
 // functions

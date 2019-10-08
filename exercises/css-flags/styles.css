@@ -1,6 +1,7 @@
 * {
     box-sizing: border-box;
     font-size: 0px;
+    background-color: lightgray;
 }
 .full-white {
     background-color: white;
@@ -51,6 +52,9 @@
     width: 300px;
     height: 75px;
 }
+.mad-group {
+    display: inline-block;
+}
 .mad-white {
     background-color: white;
     display: inline-block;
@@ -59,7 +63,7 @@
 }
 .mad-red {
     background-color: red;
-    display: inline-block;
+    /* display: inline-block; */
     vertical-align: top;
     width: 200px;
     height: 150px;
@@ -67,7 +71,7 @@
 }
 .mad-green {
     background-color: green;
-    display: inline-block;
+    /* display: inline-block; */
     width: 200px;
     height: 150px;
     vertical-align: bottom;

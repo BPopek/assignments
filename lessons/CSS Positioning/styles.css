@@ -1,0 +1,23 @@
+/* Static: Default position
+Relative: Position changes relative to natural default position
+    can use to overlap shapes
+Absolute:  brings the item to the front of parent container. If parent container has no     position, default container will be the display window.
+Fixed: Position is always relative to the window, will stay exactly where you position      it in the window even when you scroll.
+*/
+
+
+#box {
+    background-color: blue;
+    display: inline-block;
+    width: 45%;
+}
+#box2 {
+    background-color: red;
+    display: inline-block;
+    width: 45%;
+}
+div {
+    background-color: black;
+    height: 100px;
+    margin: 1px;
+}

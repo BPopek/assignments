@@ -1,0 +1,366 @@
+* { 
+    font-size: 0px;
+    background-color: lightgrey;
+}
+
+.row1 {
+    position: absolute;
+    top: 25px;
+}
+.france {
+    position: absolute;
+    width: 300px;
+    height: 150px;
+    background-color: black;
+}
+.fr-blue {
+    width: 100px;
+    height: 150px;
+    background-color: blue;
+    display: inline-block;
+}
+.fr-white {
+    width: 100px;
+    height: 150px;
+    background-color: white;
+    display: inline-block;
+}
+.fr-red {
+    width: 100px;
+    height: 150px;
+    background-color: red;
+    display: inline-block;
+}
+.germany {
+    position: absolute;
+    width: 300px;
+    height: 150px;
+    left: 350px;
+    top:0px; 
+    display: inline-block;
+}
+.germ-black {
+    width: 300px;
+    height: 50px;
+    background-color: black;
+    /* display: inline-block; */
+}
+.germ-red {
+    width: 300px;
+    height: 50px;
+    background-color: red;
+}
+.germ-yellow {
+    width: 300px;
+    height: 50px;
+    background-color: yellow;   
+}
+.madagascar {
+    position: absolute;
+    left: 700px;
+    top:0px; 
+    /* background-color: black; */
+}
+.mad-white {
+    width: 100px;
+    height: 150px;
+    background-color: white;
+    position: absolute;
+    top: 0px;
+    left: 700px;
+
+}
+.mad-red {
+    width: 200px;
+    height: 75px;
+    background-color: red;
+    position: absolute; 
+    top: 0px;
+    left: 800px;
+}
+.mad-green {
+    width: 200px;
+    height: 75px;
+    background-color: green;
+    position: absolute;
+    top: 75px;
+    left: 800px;
+}
+.row2 {
+    position: absolute;
+    top: 50px;
+}
+.switzerland {
+    position: absolute;
+    left: 0px;
+    top: 175px; 
+}
+.sw-red {
+    width: 150px;
+    height: 150px;
+    background-color: red;
+    position: absolute;
+    left: 0px;
+}
+.sw-w1 {
+    width: 25px;
+    height: 75px;
+    background-color: white;
+    position: absolute;
+    top: 40px;
+    left: 65px;
+}
+.sw-w2 {
+    width: 75px;
+    height: 25px;
+    background-color: white;
+    position: absolute;
+    top: 65px;
+    left: 40px;
+}
+.sweden {
+    position: absolute;
+    left: 200px;
+    top: 175px;
+}
+.swed-blue {
+    background-color: blue;
+    width: 300px;
+    height: 150px;
+}
+.swed-yell1 {
+    background-color: yellow;
+    height: 50px;
+    width: 300px;
+    position: absolute;
+    left: 0px;
+    top: 50px;
+}
+.swed-yell2 {
+    background-color: yellow;
+    height: 150px;
+    width: 50px;
+    position: absolute;
+    left: 75px;
+    top: 0px;
+}
+.gamibia {
+    position: absolute;
+    left: 550px;
+    top: 175px;
+}
+.gam-red {
+    background-color: red;
+    height: 45px;
+    width: 300px;
+    position: absolute;
+
+}
+.gam-blue {
+    background-color: blue;
+    height: 45px;
+    width: 300px;
+    position: absolute;
+    border-top: white solid 7.5px;
+    border-bottom: white solid 7.5px;
+    top: 45px;
+}
+.gam-green {
+    background-color: green;
+    height: 45px;
+    width: 300px;
+    position: absolute;
+    top: 105px;
+}
+.row3 {
+    position: absolute;
+    top: 375px;
+}
+.tonga {
+    position: absolute;
+}
+.tonga-red1 {
+    background-color: red;
+    width: 300px;
+    height: 150px;
+}
+.tonga-white {
+    background-color: white;
+    width: 60px;
+    height: 50px;
+    position: absolute;
+    top: 0px;
+
+}
+.tonga-red2 {
+    background-color: red;
+    width: 12px;
+    height: 35px;
+    position: absolute;
+    top: 7px;
+    left: 24px;
+}
+.tonga-red3 {
+    background-color: red;
+    width: 35px;
+    height: 12px;
+    position: absolute;
+    top: 19px;
+    left: 12px;
+}
+.japan {
+    position: absolute;
+    left: 350px;
+}
+.jap-white {
+    background-color: white;
+    width: 300px;
+    height: 150px;
+    position: absolute;
+}
+.jap-red {
+    background-color: red;
+    width: 75px;
+    height: 75px;
+    border-radius: 50px;
+    position: absolute;
+    top: 45px;
+    left: 110px;
+}
+.greece {
+    position: absolute;
+    left: 700px;
+}
+.grBlueBig {
+    background-color: blue;
+    width: 300px;
+    height: 150px;
+    position: absolute;
+
+}
+.grWhiteSt1 {
+    background-color: white;
+    width: 300px;
+    height: 16.667px;
+    position: absolute;
+    top: 16.667px;
+    left: 0px;
+}
+.grWhiteSt2 {
+    background-color: white;
+    width: 300px;
+    height: 16.667px;
+    position: absolute;
+    top: 50.01px;
+    left: 0px;
+}
+.grWhiteSt3 {
+    background-color: white;
+    width: 300px;
+    height: 16.667px;
+    position: absolute;
+    top: 83.35px;
+    left: 0px;
+}
+.grWhiteSt4 {
+    background-color: white;
+    width: 300px;
+    height: 16.667px;
+    position: absolute;
+    top: 116.69px;
+    left: 0px;
+}
+.grBlueBox {
+    background-color: blue;
+    width: 75px;
+    height: 75px;
+    position: absolute;
+}
+.grWhiteCr1 {
+    background-color: white;
+    height: 16.667px;
+    width: 75px;
+    position: absolute;
+    top: 33.34px;
+}
+.grWhiteCr2 {
+    background-color: white;
+    height: 75px;
+    width: 16.667px;
+    position: absolute;
+    left: 30.34px;
+}
+.row4 {
+    position: absolute;
+    top: 200px;
+}
+.niger {
+    position: absolute;
+}
+.nigerOrange {
+    background-color: orangered;
+    width: 200px;
+    height: 50px;
+    position: absolute;
+}
+.nigerWhite {
+    background-color: white;
+    width: 200px;
+    height: 50px;
+    position: absolute;
+    top: 50px;
+}
+.nigerGreen {
+    background-color: green;
+    width: 200px;
+    height: 50px;
+    position: absolute;
+    top: 100px;
+}
+.nigerOrangeDot {
+    background-color: orangered;
+    width: 45px;
+    height: 45px;
+    border-radius: 45px;
+    position: absolute;
+    top: 52.5px;
+    left: 72.5px;
+}
+.maldives {
+    position: absolute;
+    left: 250px;
+}
+.malRed {
+    background-color: darkred;
+    width: 300px;
+    height: 150px;
+    position: absolute;
+}
+.malGreenBox {
+    background-color: darkgreen;
+    width: 225px;
+    height: 75px;
+    position: absolute;
+    top: 37.5px;
+    left: 37.5px;
+}
+.malWhiteCir {
+    background-color: white;
+    width: 40px;
+    height: 40px;
+    border-radius: 40px;
+    position: absolute;
+    left: 130px;
+    top: 55px;
+
+}
+.malGreenCir {
+    background-color: darkgreen;
+    width: 40px;
+    height: 40px;
+    border-radius: 40px;
+    position: absolute;
+    left: 140px;
+    top: 55px;
+}
+
