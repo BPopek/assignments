@@ -1,0 +1,15 @@
+.container {
+    display: flex;
+    border: 5px solid #ffcc5c;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+/* media query: @media(condition goes here) just the items listed below will change for smaller screens. So below is saying that if your screen is less than 600px it will apply these */
+
+/* @media screen and (max-width: 735px){ 
+    .container {
+        flex-direction: column;
+    }
+}  */

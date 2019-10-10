@@ -1,0 +1,12 @@
+#box {
+    background-color: white;
+    border: 2px black solid;
+    height: 200px;
+    width: 200px;
+}
+.boxes {
+    background-color: white;
+    border: 2px black solid;
+    height: 200px;
+    width: 200px;
+}

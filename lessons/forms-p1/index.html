@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Forms</title>
+
+</head>
+<body>
+    <!-- <form id="myForm"> does work but don't use ID since you can use names which only work for form-->
+        <form name="myForm">
+            <!-- <input type="text" placeholder="Full name" value="Default User"> -->
+
+        <input type="text" placeholder="Full name" name="fullName">
+        <input type="number" placeholder="Age" name="myAge">
+        <input type="email" placeholder="Email" name="myEmail" required>
+
+        <button>Submit</button>
+
+    </form>
+
+    <h3 id='user info'>
+    </h3>
+
+    <script src="app.js"></script>
+
+</body>
+</html>
+
+
+<!-- TYPE:
+TEXT: basic input field 
+NUMBER: adds arrows to count up/down, won't accept letters 
+DATE: brings up calendar and date picker
+COLOR: brings up color options and color wheel
+PLACEHOLDER: indicator of what to enter, 
+VALUE: keeps that value until user changes text -->
+
+<!-- 
+<div> 
+    addition
+</div>
+<div> 
+    subtraction
+</div>
+<div> 
+    addition
+</div> -->
