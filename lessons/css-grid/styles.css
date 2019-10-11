@@ -1,0 +1,41 @@
+.container {
+    display: grid;
+    /* grid-template-columns: 100px 100px 100px; */
+    /* grid-template-columns: 1fr 2fr 1fr; */
+    grid-template-columns: repeat(5, 1fr);
+        /* only affects immediate (first) children */
+        /* to make middle column take up free space set middle to AUTO or 1 fr (stands for 1 fraction) */
+        /* for repeat, (# columns, size) */
+
+
+    /* grid-template-rows: 400px 200px; */
+    grid-template-rows: 40px 200px 40px;
+    grid-gap: 3px;
+        /* no fr option for rows, only width */
+        /* auto makes it take up the height of text
+        auto twice if two rows, or can use repeat(3, auto) */
+        /* if you don't know how many rows you will have, do 'grid-auto-rows' and use one height. 
+        'grid-template-rows ' */
+}
+/* 
+@media (max-width: 400px){
+    .container {
+    grid-template-columns: 1fr;
+}} */
+
+.header {
+    grid-column: 2/-1;
+        /* 1/-1 is auto to take the whole width of page  */
+}
+.menu {
+    grid-column: 1/2;
+    grid-row: 1/4;
+}
+.content {
+    grid-column: 2/-1;
+
+}
+.footer {
+    grid-column: 2/-1;
+
+}

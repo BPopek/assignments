@@ -1,0 +1,38 @@
+form {
+    padding: 15px;
+    margin: 25px;
+    background: lightsalmon;
+    border-radius: 10px;
+    border-right: 3px rgba(119, 136, 153, 0.514) solid;
+    border-bottom: 3px rgba(119, 136, 153, 0.514) solid;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
+
+}
+/* input[type="text"] {
+    font-size: 20px;
+    margin: 10px;
+} */
+
+.textInput{
+    font-size: 20px;
+    margin: 10px 35px 5px 10px;
+}
+
+input[type="radio"] {
+    border: 0px;
+    height: 20px;
+    width: 20px;
+    margin: 0px;
+    padding: 0px;
+    font-size: 15px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+/* input[type="checkbox"] {
+
+} */
+.textLabel {
+    margin: 10px;
+}
+.textLabel2 {
+    margin-left: 75px;
+}

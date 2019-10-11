@@ -35,3 +35,12 @@
     align-self: flex-start;
     background-color: burlywood;
 }
+.sub {
+    position: center;
+}
+.right.theme-two {
+    background-color: red;
+}
+.left.theme-two {
+    background-color: rgba(11, 14, 5, 0.637);
+}
