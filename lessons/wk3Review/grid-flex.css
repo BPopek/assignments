@@ -1,0 +1,108 @@
+.container {
+    display: grid;
+    /* this installs grid layout, properties will not work if you don't apply it */
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 100px 100px;
+    /* grid-auto-rows: 100px 
+        this will set the rows to be however many are needed but all have same height */
+    grid-gap: 5px;
+    justify-content: center;
+    /* do not assign a specific height to the container, this limits the grid to that height. Assign the height by using the row & column template info. 
+    Can use width to specify a % of the width of the window, but use with 1fr and not an exact px size so the */
+
+}
+
+.boxes {
+    background-color: blue;
+/* assign color to boxes, not overall container or else the whole container will be the solid color with no gaps */
+}
+img{
+    width: 100%
+}
+/* put image within div tag, set specific width and it will stay within the div tag 
+ */
+
+    /* flex and grid are the same property, cannot do both in the same element. Can use both on the same page but not assigned to the same.  */
+
+
+/* background image  */
+
+.hiker {
+    background-image: url('put link here');
+    background-position: center center;
+    /* background-position: can put %'s here, first one lets you move L-R, second one up-down */
+    background-size: cover;
+}
+
+/* FLEXBOX: */
+    /* grid lays out the overall container. 
+    Flex lays out the information within the box. 
+    Can nest within each other, but control as much as you can from the parent*/
+/* Grid is good to use for product layout pages */
+
+.containerFlex {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    grid-auto-rows: 60px 80vh 60px;
+    grid-gap: 5px;
+}
+/* parent item gets grid-template-rows */
+.containerFlex > div {
+    border: 1px solid black;
+}
+
+.nav {
+    grid-column: 2/-1;
+    background-color: black;
+    color: white;
+}
+.nav > ul {
+    display: flex;
+    justify-content: space-evenly;
+        /* SPECIFIC TO FLEX. Spaces them horizontally */
+    list-style-type: none;
+    align-items: center;
+    /* SPECIFIC TO FLEX. Spaces them vertically: flex-end puts it at the bottom, flex-start puts it at the top. To use 'center' set height to 100% so it will center based on 100% of the height. If height is set to AUTO it will center based on the height of the text, not the height of the box */
+
+    /* set height to min-height: 100vh; */
+
+
+     /* *flex direction: column is useful for media queries
+                set for column for smallest media first, then change flex-display to row to take it back for larger screens*/
+
+    /* also use justify-self: center and align-self: center to align images   
+    
+        text-align will center the text   
+        */
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+}
+
+.menu {
+    /* grid-column: 1/3; */
+    grid-row: 1/4;
+    background-color: burlywood;
+}
+.content {
+    grid-column: 2/-1;
+    background-color: lightcoral;
+}
+.footer {
+    grid-column: 2/-1;
+    background-color: green;
+}
+
+
+/* TO MAKE PRODUCT LAYOUT */
+/* 
+<main>
+    <nav>
+    <h1>PRODUCT 1</h1> 
+        <p>product information or description</p>
+        <img link>
+    <nav>
+    
+    */
+
+

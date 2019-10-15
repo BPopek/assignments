@@ -1,0 +1,63 @@
+.box {
+    background-color: blue;
+    height: 100px;
+    width: 100px;
+}
+img {
+    width: 50%;
+    display: block;
+    /* example formatting for if image used */
+}
+@media (min-width: 800px) {
+    .box {
+        width: 500px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .box {
+        width: 900px;
+    }
+    .img {
+        display: none;
+            /* example formatting to remove the image for this size */
+    }
+}
+@media (max-width: 1200px){
+    .box {
+        background-color: purple;
+    }
+}
+@media (max-width: 800px){
+    .box {
+        background-color: green;
+    }
+}
+
+@media (min-width: 800px) and (max-width: 1200px) {
+    .box {
+        height: 100px;
+        width: 100px;
+    }
+}
+@media (max-width: 800px) , (min-width: 1200px) {
+    .box {
+        background-color: green; 
+    }
+}
+
+/* 
+MIN-WIDTH: for when screen is larger than size stated. Whatever is inside will not take effect until width is at least the size entered.
+    ***** Make sure you put them in order of lowest to highest in CSS (top to bottom) or it will not read correctly!
+
+MAX-WIDTH: for when screen is smaller than size stated. (px amount and below)
+    ***** Make sure you put them in order of largest to smallest in CSS.
+
+and: allows you to specify two media queries within one query. 
+    ***** Has to be both conditions!
+
+, means OR. So for example above, if above OR below the sizes shown then the display changes shown will apply.
+    ***** Always do max-width first and then min-width
+
+*/
+

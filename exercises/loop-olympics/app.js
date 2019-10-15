@@ -34,24 +34,24 @@
 //     }
 // }    
 
-const peopleArray = [
-    {
-      name: "Harrison Ford",
-      occupation: "Actor"
-    },
-    {
-      name: "Justin Bieber",
-      occupation: "Singer"
-    },
-    {
-      name: "Vladimir Putin",
-      occupation: "Politician"
-    },
-    {
-      name: "Oprah",
-      occupation: "Entertainer"
-    }
-  ]
+// const peopleArray = [
+//     {
+//       name: "Harrison Ford",
+//       occupation: "Actor"
+//     },
+//     {
+//       name: "Justin Bieber",
+//       occupation: "Singer"
+//     },
+//     {
+//       name: "Vladimir Putin",
+//       occupation: "Politician"
+//     },
+//     {
+//       name: "Oprah",
+//       occupation: "Entertainer"
+//     }
+//   ]
 
 //   for(let i = 0; i < peopleArray.length; i++) {
 //       console.log(peopleArray[i].name)
@@ -80,7 +80,7 @@ const peopleArray = [
 //   console.log(occupationsArrOdd)
 
 
-// //   matrixes
+//   matrixes
 // const matrix = [
 //     [0, 0, 0], 
 //     [1, 5, 1], 
@@ -116,15 +116,15 @@ const peopleArray = [
 
 // GOLD MEDAL 2
 
-// const matrix1 = []
-//     for(let i = 0; i < 3; i++) {
-//       let matrix2 = [];
-//         for(j = 0; j < 3; j++) {
-//           matrix2[j] = i;
-//         }
-//         matrix1[i] = matrix2;
-//     }
-// console.log(matrix1)
+const matrix1 = []
+    for(let i = 0; i < 3; i++) {
+      let matrix2 = [];
+        for(j = 0; j < 3; j++) {
+          matrix2[j] = i;
+        }
+        matrix1[i] = matrix2;
+    }
+console.log(matrix1)
 
 // GOLD MEDAL 3
 
@@ -138,12 +138,12 @@ const peopleArray = [
 //     }
 // console.log(matrix1)
 
-const matrix1 = []
-    for(let i = 0; i < 3; i++) {
-      let matrix2 = [];
-        for(j = 0; j < 3; j++) {
-          matrix2[j] = "x";
-        }
-        matrix1[i] = matrix2;
-    }
-console.log(matrix1)
+// const matrix1 = []
+//     for(let i = 0; i < 3; i++) {
+//       let matrix2 = [];
+//         for(j = 0; j < 3; j++) {
+//           matrix2[j] = "x";
+//         }
+//         matrix1[i] = matrix2;
+//     }
+// console.log(matrix1)
