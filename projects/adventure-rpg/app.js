@@ -41,7 +41,7 @@ while(isAlive && !hasWon){
     }
 
 function walk(){
-    let random = Math.floor(Math.random()*4)
+    let random = Math.floor(Math.random() * 4)
     if (random === 3){
         enemyEncounter()
     } else {
@@ -70,13 +70,13 @@ function selectEnemy(){
 
     }
 
-    // let living = ask.keyIn('Are you alive? (y/n)', {limit: 'yn'})
-    // if (living === 'y'){
-    //     console.log('keep playing')    
-    // } else if (living === 'n'){
-    //     isAlive = false
-    //     console.log('You are dead')
-    // }
+let living = ask.keyIn('Are you alive? (y/n)', {limit: 'yn'})
+    if (living === 'y'){
+        console.log('keep playing')    
+    } else if (living === 'n'){
+        isAlive = false
+        console.log('You are dead')
+    }
 }
 
 console.log('the game ended')

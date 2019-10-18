@@ -1,0 +1,27 @@
+{
+    "appetizers": [
+        {"name": "Mozzarella Sticks", "ingredients": ["breading", "cheese"], "description": "Tasty fried cheese sticks"}, 
+        {"name": "Potstickers", "ingredients": ["chicken", "carrot", "dough"], "description": "Pan-fried crispy goodness"}
+        ],
+    "coldSandwiches": [
+        {"name": "Turkey Sandwich", "ingredients": ["wheat bread", "cheddar cheese", "turkey", "lettuce"], "description": "Served on a sub for maximum fillings"},
+        {"name": "PB&J", "ingredients": ["wheat bread", "peanut butter", "jelly"], "description": "Classic comfort food"}
+        ],
+    "hotSandwiches": [
+        {"name": "Turkey Club", "ingredients": ["wheat bread", "pepperjack cheese", "turkey", "lettuce"], "description": "Grilled in a panini press for maximum crispiness"},
+        {"name": "Meatball Sub", 
+            "ingredients": ["wheat roll", "turkey meatballs", "marinara sauce", "provolone cheese"], 
+            "description": "Classic comfort food"}
+        ],
+    "dessert": [
+        {"name": "Baklava", "ingredients": ["phyllo dough", "honey", "walnuts"], "description": "Delicious layered honey & nut treat"},
+        {"name": "Tiramisu", "ingredients": ["ladyfinger cookies", "coffee or espresso flavoring", "marscapone goodness"], "description": "Classic comfort food"}
+            ],
+    "drinks": [
+        {"name": "Chocolate Milk", 
+            "ingredients": ["milk", "chocolate flavoring"], 
+            "description": "C'mon now, who doesn't like chocolate milk?"},
+        {"name": "coffee", "ingredients": ["coffee", "milk or sugar available"], "description": "basic cup o' coffee"},
+        {"name": "tea", "types available": ["green", "black", "various herbal"], "description": "a variety of tea options are available"}    
+            ]
+}

@@ -1,0 +1,25 @@
+.box {
+    width: 300px;
+    height: 300px;
+    background-color: aquamarine;
+    margin: auto;
+    border: 1px solid #333;
+    box-shadow: 10px 10px 5px 0 #999;
+    border-radius: 10%;
+}
+/* pseudo selector is activated with the : as shown below*/
+
+.box:hover {
+    box-shadow: none;
+    border-radius: 0;
+    background-color: cyan;
+    /* transition-property: border-radius; */
+    transition-property: all;
+    transition-delay: 1s;
+    transition-duration: 1s;
+    transition-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
+    /* can use specific settings or  general ease-in ease or ease-out*/
+    transition-timing-function: ease-in;
+    /*shortcut to combine all in one function:*/
+    transition: all 1s 1s ease-in;
+}
