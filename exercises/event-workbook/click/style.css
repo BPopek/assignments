@@ -8,3 +8,6 @@
 h1, h3 {
     text-align: center;
 }
+.red-box.hidden {
+    visibility: hidden;
+  }

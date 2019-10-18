@@ -40,32 +40,34 @@ const princess = new Hero('Princess Toadstool', 100, 1)
 // const heroes = [princess, mario, luigi, toad]
 // ************************************************************
 
-function PrintInventory(name, hp, ap){
+function GenerateItem(name, hp, ap){
     this.name = name;
     this.hp = hp;
     this.ap = ap;
 }
-const oneup = new PrintInventory('1 UP', 100, 5)
-const mushroom = new PrintInventory('Mushroom', 70, 20)
-const starman = new PrintInventory('Starman', 50, 50)
+const oneup = new GenerateItem('1 UP', 30, 2)
+const mushroom = new GenerateItem('Mushroom', 40, 2)
+const starman = new GenerateItem('Starman', 35, 35)
 
-const bomb = new PrintInventory('Bomb', 5, 50)
-const vegetable = new PrintInventory('Vegetable', 5, 80)
-const turtleshell = new PrintInventory('Turtle Shell', 10, 90)
+const bomb = new GenerateItem('Bomb', 5, 40)
+const vegetable = new GenerateItem('Vegetable', 5, 35)
+const turtleshell = new GenerateItem('Turtle Shell', 10, 45)
 
 const inventoryItems = []
 const possibleItems = [oneup, mushroom, starman, bomb, vegetable, turtleshell]
 
-function printInventory(){
-    console.log(`Your inventory includes: ${inventoryItems.name}`)
+function printFullInventory(){
+    console.log(`Your inventory includes:`)
+        inventoryItems.forEach(item => {
+            console.log(item.name)
+        })
+    console.log(`Your current health is ${princess.hp} and your attack is ${princess.ap}`)
 }
-
-// ************************************************************
 
 console.log('Welcome to Subcon, the land of dreams! Our once-beautiful world now suffers at the hands of the evil Wart. Please help us!')
 const name = ask.question('What is your name? ')
 
-console.log(`Thanks for joining us, ${name}! Only you can free us from his tyranny.`)
+console.log(`Thanks for joining us, ${name}! Only you can free us from Wart's tyranny.`)
 
 while (isAlive && !hasWon && wartAlive){
     let choice = ask.keyIn(`Would you like to [w] Walk, [l] look around for helpful items, [i] Check Inventory, or [q] Leave Game? `, {limit: 'wliq'})
@@ -74,7 +76,7 @@ while (isAlive && !hasWon && wartAlive){
     } else if (choice === 'l'){
         lookAround()
     } else if (choice === 'i'){
-        printInventory()
+        printFullInventory(inventoryItems)
     } else {
         isAlive = false
         console.log('You quit the game')
@@ -89,31 +91,71 @@ function walk(){
         console.log('You continue walking safely')
     }
 }
-// ***********
+
 function lookAround(){
-    let random = Math.floor(Math.random() * 4)
-    let randomWeapon = Math.floor(Math.random() * possibleItems.length)
-    if(random === 3){
-    findItem(possibleItems)
+    let random = Math.floor(Math.random() * 3)
+    // let randomWeapon = Math.floor(Math.random() * possibleItems.length)
+    if(random === 2){
+        findItem(possibleItems)
+        let choice = ask.keyIn(`Would you like to [w] Walk, [l] look around for helpful items, [i] Check Inventory, or [q] Leave Game? `, {limit: 'wliq'})
+        if (choice === 'w'){
+            walk() 
+        } else if (choice === 'l'){
+            lookAround()
+        } else if (choice === 'i'){
+            printFullInventory(inventoryItems)
+        } else {
+            isAlive = false
+            console.log('You quit the game')
+        }
     } else {
         let choice = ask.keyIn(`You didn't find any weapons or health items. Would you like to [w] Walk, [l] look around more for helpful items, [i] Check Inventory, or [q] Leave Game? `, {limit: 'wliq'})
         if (choice === 'w'){
             walk() 
         } else if (choice === 'l'){
-            lookAround(possibleItems)
+            lookAround()
         } else if (choice === 'i'){
-            printInventory()
+            printFullInventory(inventoryItems)
         } else {
             isAlive = false
             console.log('You quit the game')
         }
     }
 }
-function findItem(){
-    let random = Math.floor(Math.random() * possibleItems.length)
-    return possibleItems[random]
+function findItem(items){
+    let random = Math.floor(Math.random() * items.length)
+    const foundItem = items[random]
+    // console.log(938948959384, inventoryItems)
+    // inventoryItems.push(item[random]);
+    //be more specific... compare foundItem.name with oneup.name
+
+    //condition should check to see if items contains the foundItem
+    const doubleCheckItems = inventoryItems.some(function(item) {
+        // console.log('inventoryItems', inventoryItems)
+        // console.log('foundItem', foundItem)
+        // console.log(92384239488, foundItem.name === item.name)
+        return foundItem.name === item.name
+    })
+
+    if (!doubleCheckItems){
+        // console.log('not fired')
+        inventoryItems.push(foundItem);
+    // } else console.log('fired')
+
+    if (foundItem === oneup){
+        inventoryItems.pop();
+    } else if (foundItem === mushroom){
+        inventoryItems.pop(); 
+    } else if (foundItem === starman){
+        inventoryItems.pop()
+    }
+    console.log(`You found a ${foundItem.name}! This has been added to your inventory and brought you ${foundItem.hp} health points and ${foundItem.ap} attack points.`) 
+    princess.hp += items[random].hp
+    princess.ap += items[random].ap
+    return inventoryItems
 }
-// **********
+}
+
 function selectEnemy(){
     let random = Math.floor(Math.random() * enemies.length)
     return enemies[random]
@@ -173,7 +215,7 @@ function attack(currEnemy) {
 }
 
 function run(currEnemy) {
-    let random = Math.floor(Math.random() * 5)
+    let random = Math.floor(Math.random() * 2)
     if (random === 1){
         console.log('You escaped your enemy!')
     } else {
