@@ -55,3 +55,8 @@ axios.delete("https://api.vschool.io/betsy/todo") + id)
 
 // POST
 // to make checkbox
+
+
+// PUTS and POST need an object created before them
+
+// add event listener to list input form. Use submit because it adds when user hits 'enter' or clicks submit button. Event is the submission, target is the form itself.
