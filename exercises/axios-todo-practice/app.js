@@ -1,30 +1,12 @@
 // const axios = require("axios")
 
-// const createToDo = ((singleToDoObject) => {
-//     axios.post("https://api.vschool.io/betsy/todo/" + singleToDoObject._id).then(function(response) {
-//         alert("Your to-do was successfully added!")
-//     } (function(response) {
-//         alert("There was a problem creating your to-do.");
-//         })
-//     )
-// })
-
-// for(let i = 0; i < response.data.length; i++) {
-//         let newItem = document.createElement('h5');
-//         newItem.textContent = response.data[i].title;
-//         document.getElementById("list").appendChild(newItem)
-//         if(response.data[i].completed === true) {
-//             newItem.innerHTML = `<s>${response.data[i].title}</s>`
-//         }
-    // }
-
 const title = document.getElementById("title")
 const description = document.getElementById("description")
 const listInput = document.listInput
 const price = document.getElementById("price")
 const url = document.getElementById("url")
 const box = document.getElementsByClassName("checkbox")
-
+const form = document.form
 
 axios.get("https://api.vschool.io/Betsy/todo/").then((response) => {
     const todos = response.data 
@@ -33,7 +15,7 @@ axios.get("https://api.vschool.io/Betsy/todo/").then((response) => {
     }
 })
 
-document.listInput.addEventListener("submit", (e) => {
+form.addEventListener("submit", (e) => {
     e.preventDefault()
     const newToDo = {
         title: e.target.title.value, 
@@ -42,9 +24,9 @@ document.listInput.addEventListener("submit", (e) => {
         imgUrl: e.target.url.value
     }
     
-axios.post("https://api.vschool.io/Betsy/todo/", newToDo).then((response) => {
-    makeTodo(response.data)
-    })
+    axios.post("https://api.vschool.io/Betsy/todo/", newToDo).then(response => {
+        makeTodo(response.data)
+        })
 })
 
 function makeTodo(todo){
@@ -56,52 +38,119 @@ function makeTodo(todo){
     const checkbox = document.createElement("input")
     checkbox.className += 'checkbox'
     const deleteBut = document.createElement("button")
-
+    const editBut = document.createElement("button")
 
 // edit element
     h1.textContent = todo.title 
-
-    if(todo.completed === true) {
-        // h1.innerHTML = `<s>${todo.title}</s>`
-        h1.style.textDecoration = 'line-through';
-        } else {
-            h1.textContent = todo.title
+    if(todo.completed) {
+        h1.style.textDecoration = 'line-through'
     }
 
     checkbox.type = "checkbox"
-    // checkbox.type.checked = todo.completed
+    checkbox.checked = todo.completed
     p.textContent = todo.description
     img.src = todo.imgUrl
     deleteBut.type = "button"
     deleteBut.textContent = "X"
-    
+    editBut.type = "button"
+    editBut.textContent = "EDIT"
+
     checkbox.addEventListener("change", e => {
-        todo.completed = checkbox.checked
-        updateToDo(todo)
-        console.log(event.target.checked)
+        axios.put("https:api.vschool.io/Betsy/todo/" + todo._id, {completed: e.target.checked}).then(response => {
+            // link in put abpve could also look like: (https://api.vschool.io/Betsy/todo/ + todo._id}, todo)
+            h1.style.textDecoration = response.data.completed ? "line-through" : "none"
+        })
     })
 
     deleteBut.addEventListener('click', e => {
-        deleteToDo(todo)
-        console.log(event.target)
+       axios.delete("https:api.vschool.io/Betsy/todo/" + todo._id).then(response =>{
+    //    console.log(response.data.msg)
+    // this console log ^ shows the response from the database on browser inspect console log (you have successfully deleted the record)
+       container.remove()
+        })
+    })
+
+    editBut.addEventListener('click', e => {
+        const titleInput = document.createElement('input');
+        titleInput.type = "text";
+        titleInput.value = h1.textContent
+        container.replaceChild(titleInput, h1)
+
+        const descriptionInput = document.createElement('input');
+        descriptionInput.type = "text";
+        descriptionInput.value = p.textContent
+        container.replaceChild(descriptionInput, p)
+
+        const urlInput = document.createElement('input');
+        urlInput.type = "text";
+        urlInput.value = img.src
+        container.replaceChild(urlInput, img)
+
+        const saveBut = document.createElement('button');
+        saveBut.type = "button";
+        saveBut.textContent = "save";
+        container.replaceChild(saveBut, editBut)
+
+        // container.appendChild(titleInput)
+
+        saveBut.addEventListener('click', e => {
+            const saveToDo = {
+                title: titleInput.value, 
+                description: descriptionInput.value, 
+                imgUrl: urlInput.value
+            }
+            
+            axios.put(`https:api.vschool.io/Betsy/todo/${todo._id}`, saveToDo).then(response => 
+                console.log(response.data))
+        })
+
     })
 
 // append
     container.appendChild(h1)
     container.appendChild(p)
+    container.appendChild(img)
     container.appendChild(checkbox)
     container.appendChild(deleteBut)
-    container.appendChild(img)
+    container.appendChild(editBut)
 
 // console.log(container)
     list.appendChild(container)
 
 }
+// ********
+// function updateToDo(todo){
+//     axios.put(`https://api.vschool.io/Betsy/todo/${todo._id}`, todo).then(response => console.log(response.data))
+// }
+// ********
 
-function updateToDo(todo){
-    axios.put(`https://api.vschool.io/Betsy/todo/${todo._id}`, todo).then(response => console.log(response.data))
-}
+// ******** CLINT'S CODE (was inside maketoDo)
+// deleteBut.addEventListener('click', e => {
+//     deleteToDo(todo)
+//     console.log(event.target)
+// })
 
-function deleteToDo(todo){
-    axios.delete(`https://api.vschool.io/Betsy/todo/${todo._id}`, todo).then(response => console.log(response.data))
-}
+
+// ******** OUTSIDE MAKETODO
+
+// function deleteToDo(todo){
+//     axios.delete(`https://api.vschool.io/Betsy/todo/${todo._id}`, todo).then(response => console.log(response.data))
+// }
+// ********
+
+
+// ******** CLINT'S CODE (was inside maketoDo)
+// checkbox.addEventListener("change", e => {
+//     todo.completed = checkbox.checked
+//     updateToDo(todo)
+//     console.log(event.target.checked)
+// })
+
+// ******** OUTSIDE MAKETODO
+
+
+// function editToDo(todo){
+//     axios.put(`https://api.vschool.io/Betsy/todo/${todo._id}`, todo).then(response => console.log(response.data))
+// }
+
+

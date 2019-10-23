@@ -48,7 +48,7 @@ const editedToDo = {
 }
 axios.put("https://api.vschool.io/betsy/todo/ID NUMBER HERE" + or id here, editedToDo)
 
-// to DELETE 
+// to DELETE. DELETE DOES NOT NEED A 2ND ARGUMENT, JUST DELETING THE WHOLE ITEM AND NO NEED TO TELL IT WHICH TO EDIT
 axios.delete("https://api.vschool.io/betsy/todo") + id)
 
 
@@ -60,3 +60,11 @@ axios.delete("https://api.vschool.io/betsy/todo") + id)
 // PUTS and POST need an object created before them
 
 // add event listener to list input form. Use submit because it adds when user hits 'enter' or clicks submit button. Event is the submission, target is the form itself.
+
+
+
+checkbox.addEventListener("change"), e => {
+    axios.put("https:api.vschool.io/Betsy/todo/" + todo._id), {completed: e.target.checked}.then(response => h1.style.textDecoration = response.data.completed ? "line-through" : "none"
+)}
+
+// terniary statement: response.data.completed ? console.log("true") : console.log("true") can turn it into a shortened version: const whatever = response.data.completed ? "true" : "true"
