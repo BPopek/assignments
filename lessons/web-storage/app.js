@@ -39,6 +39,7 @@
 
         // must de-jsonify the info to be able to use it, run through PARSE.
         // for getting objects and arrays from local storage 
+        
     const deJsonifiedUser = JSON.parse(localStorage.user)
 
     console.log(localStorage.user)
