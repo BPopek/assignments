@@ -43,7 +43,18 @@
 //         import './App.css';
         
 //         ReactDOM.render(<App />, document.getElementById('root'));
-    
+
+// APP JS FILE ALWAYS HAS:
+            // import React from 'react'
+                // function App (){
+                //     return(
+                //         <div>
+                //             Hello
+                //         </div>
+                //     )
+                // }
+                // export default App 
+
 
 // node only supports old ES5 version of 'const App = require('App') 
 // react supports ES6 so now we use 'import App from 'app'
@@ -110,3 +121,14 @@
 
 
     <colorBox backgroundColor='blue' title='title' subtitle='subtitle'/>
+
+
+// MAPPING IN REACT: way to make it more efficient
+    // create a new array that gets mapped to this variable 
+
+    destructuring: 
+
+
+// CONTAINER COMPONENTS: way to structure React files
+
+    // make new component (turtle container) and then import into the main app JS file. Makes it so the main app page stays very clean, and you can easily tell where you want to go to make edits.

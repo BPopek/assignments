@@ -3,10 +3,12 @@ import React from 'react';
 const Footer = () => {
     const styles = {
         display: 'flex',
-        height: '50px',
+        padding: '10px',
         flexDirection: 'row',
         justifyContent: 'space-evenly',
         backgroundColor: '#d1e5e1',
+        fontSize: '16px',
+        fontWeight: 'bold',
     }
     return (
         <div className='footer'>

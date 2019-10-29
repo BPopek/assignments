@@ -5,9 +5,10 @@ const Nav = () => {
             'display': 'flex',
             'height': '50px',
             'flex-direction': 'row',
-            // 'grid-columns': '3fr', 
             'justify-content': 'space-evenly',
             'background-color': '#d1e5e1',
+            fontSize: '20px',
+            fontWeight: 'bold',
             
             }
         return (

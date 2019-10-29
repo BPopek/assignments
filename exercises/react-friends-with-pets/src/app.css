@@ -1,0 +1,40 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+.friend-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 25px;
+    text-align: center;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+
+}
+.friend {
+    background-color: lightgoldenrodyellow;
+    margin: 25px;
+
+}
+h1 {
+    font-size: 30px;
+    padding: 15px;
+    background-color: darkkhaki;
+}
+h2 {
+    font-size: 24px;
+    padding: 10px;
+    color: grey;
+}
+h4 {
+    font-size: 18px;
+    color: darkgreen;
+    font-weight: bold;
+    padding: 5px;
+
+}
+h5 {
+    font-size: 14px;
+    padding: 5px 5px 15px 5px;
+
+
+}

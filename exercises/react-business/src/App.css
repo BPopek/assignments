@@ -7,8 +7,6 @@ li {
     list-style-type: none;
     align-self: center;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-size: 20px;
-    font-weight: bold;
 }
 img {
     width: 200px;
@@ -17,24 +15,54 @@ img {
     margin-bottom: 35px;
 }
 .info {
-    padding: 50px;
+    padding: 30px;
     font-size: 20px;
     font-weight: normal;
+}
+.footer {
+    font-size: 15px;
 }
 .card {
     display: flex;
     flex-direction: column;
     border: 5px solid #c0d3c5;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    width: 400px;
-    margin: 50px;
+    width: 300px;
+    margin-top: 25px;
+    margin-bottom: 25px;
+    margin-left: auto;
+    margin-right: auto;
     padding: 20px 0px 20px 0px;
     border-radius: 5px;
 }
 h1 {
     text-align: center;
+    color: #e2765aef;
+
 }
 p{
     padding: 20px;
     font-size: 15px;
+}
+
+
+@media (min-width: 500px) {
+    .main{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+    .card {
+        flex-direction: column;
+        grid-column: 1fr 1fr;
+        width: 500px;
+    }
+    .info {
+        grid-column: 1/-1;
+    }
+
+
+}
+
+@media (min-width: 1000px) {
+
 }

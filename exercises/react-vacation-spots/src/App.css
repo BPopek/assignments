@@ -1,0 +1,19 @@
+.vacation-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 25px;
+    text-align: center;
+}
+.spots {
+    box-shadow: 3px 3px 5px grey;
+}
+h1 {
+    font-size: 35px;
+    color: #501311;
+}
+h3 {
+    font-size: 30px;
+}
+h4 {
+    font-size: 25px;
+}

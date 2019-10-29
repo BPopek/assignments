@@ -1,0 +1,14 @@
+.turtle-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 10px;
+}
+
+.turtle {
+    text-align: center;
+    border: 1px solid black;
+}
+
+.turtle > img {
+    width: 10%;
+}

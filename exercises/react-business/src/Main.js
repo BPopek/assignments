@@ -18,7 +18,7 @@ const Main = () => {
             <div className='card'>
                 <h1>Dapper Dog Ties</h1>
                 {/* <Images /> */}
-                <img src="https://img.chewy.com/is/image/catalog/129278_MAIN._AC_SL400_V1539722006_.jpg"></img>
+                <img src="https://cdn10.bigcommerce.com/s-1gqpad/products/1140/images/2095/dog_tie__47187.1420182607.1280.1280.jpg?c=2"></img>
                 <p className='desc'>
                 Stop it fren blop ur givin me a spook maximum borkdrive corgo, boof mlem porgo wow very biscit wow such tempt, borkf blep thicc.   
                 </p>
@@ -48,7 +48,7 @@ const Main = () => {
                 </p>
             </div>
             <div className='card'>
-                <h1>Dapper Dog Groooming Accessories</h1>
+                <h1>Dapper Dog Grooming Accessories</h1>
                 {/* <Images /> */}
                 <img src="https://http2.mlstatic.com/raking-dog-brush-for-sheddingdeshedding-and-light-trimming-D_NQ_NP_714621-MLM28557363319_112018-F.jpg"></img>
                 <p className='desc'>
