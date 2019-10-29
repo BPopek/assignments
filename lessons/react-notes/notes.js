@@ -132,3 +132,9 @@
 // CONTAINER COMPONENTS: way to structure React files
 
     // make new component (turtle container) and then import into the main app JS file. Makes it so the main app page stays very clean, and you can easily tell where you want to go to make edits.
+
+
+// CLASS BASED COMPONENT 
+
+        //   only make it a class-based component if you need to use STATE or LIFE CYCLE COMPONENTS/METHODS (run at specific phases of life cycles)
+        // otherwise use a functional component 

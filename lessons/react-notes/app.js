@@ -19,7 +19,7 @@ import TurtleContainer from './TurtleContainer'
 // }
 
 
-function App (){
+function App = () => {
    
     return(
         <div>
