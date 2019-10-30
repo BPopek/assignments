@@ -91,7 +91,27 @@
 // PROPS 
     // Use separate props folder - type 'create-react-app .' inside the project folder?
     // create index.js and app.js files 
-    
+
+    // component: similar to a function. 
+
+    // ES6:
+            function sum(num1, num2) {
+                return num1 + num2
+            }
+            // to call function: 
+            sum(10,20)
+
+    // react version: 
+            function Sum(props){
+                return props.num1 + props.num2
+            }
+            // to call function 
+            <Sum num1={10} num2={20}/>
+            {/* can reuse it or repeat */}
+            <Sum num1={1} num2={2}/>
+            <Sum num1={0} num2={2}/>
+
+
     // using components are like using functions. Using props is like using arguments and parameters instead. 
 
     // Props are like an empty object. When we pass in a parameters, that gets inserted into the empty object
@@ -118,15 +138,26 @@
     export default App
 
 
-
-
-    <colorBox backgroundColor='blue' title='title' subtitle='subtitle'/>
+    {/* <colorBox backgroundColor='blue' title='title' subtitle='subtitle'/> */}
 
 
 // MAPPING IN REACT: way to make it more efficient
     // create a new array that gets mapped to this variable 
 
-    destructuring: 
+    // destructuring: 
+                const Turtle = (props) =>{
+                    let {name, nickName, weapon} = props
+                    // called destructuring: makes it so you no longer need to say props below, just the {name}
+                    return (
+                        <div>
+                            <h1>{props.name}</h1>
+                            <h3>{props.nickName}</h3>
+                            <h4>{props.weapon}</h4>
+                            <img src={props.image} alt=""/>
+                        </div>
+                    )
+                }
+
 
 
 // CONTAINER COMPONENTS: way to structure React files
@@ -136,5 +167,80 @@
 
 // CLASS BASED COMPONENT 
 
-        //   only make it a class-based component if you need to use STATE or LIFE CYCLE COMPONENTS/METHODS (run at specific phases of life cycles)
-        // otherwise use a functional component 
+    //   only make it a class-based component if you need to use STATE or LIFE CYCLE COMPONENTS/METHODS (run at specific phases of life cycles)
+    // otherwise use a functional component 
+
+    // ** when you map in a class based component, it goes after the render! and above the return.
+
+// STATE
+    // if you need to pass to child components: to set state of list to 
+        this.state = {
+            vacations:vacationList
+        }
+
+        // then change the mapped text to this.state
+        // const mappedVacations = mappedVacations.map.....
+        const mappedVacations = this.state.map((spot, i) => ..........)
+
+        // if making the function as 
+                changeColor(){     //you must bind this
+
+                }
+        // instead use fat arrow function 
+                changeColor = () => {
+                    this.backgroundColor = 'black'
+                }
+                // or 
+                changeColor = () => {
+                    this.setState(prev => {
+                        return {
+                            vacations: prev.vacations.map(spot => {
+                                spot.backgroundColor = 'white'
+                                return spot
+                            })
+                        }
+                    })
+                }
+
+        // add the info you want changed into the props when they are declared. If destructured, add into the props declaration. If not desctructured then add into where the mapped info is
+
+                // must use this since it is part of the class 
+            changeColor={this.changeColor}
+                
+
+// EXTENSION TO ADD: REACT JS CODE SNIPPETS - only install when comfortable typing everything out
+
+
+// FORMS 
+    // need to be a class based component
+
+
+// ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+// REVIEW: when to nest, when to build 
+        // APP: keep it to the layout of the app. Keep it as clean as possible!  
+        // Use a new a container component to use for mapping.
+        // * If not a state-based or life cycle component, use a regular FUNCTION based component.
+        // Make all components separate, then bring into the APP parent div  
+
+        // to map through items: first type out name of list & mapping info, make component name/label
+                const appedVacations = nameofList.map(spot => <Vacation />)
+                            // THEN ADD ALL PROPS FOR THE COMPONENT 
+                const mappedVacations = nameofList.map(spot => <Vacation price={spot.price}
+                                                                         place={spot.place}
+                                                                         time={timeToGo.place}
+                                                                         />)
+            // Be sure to place the name in the return, for the above it would be {mappedVacations}
+            // then make a component for what you are mapping, and add in the props 
+                VACATION component:
+                const Vacation = (props) =>{
+                    let {price, place, time} = props //if you use this line, this is called destructuring: makes it so you no longer need to say props below, just the {name}
+                    return (
+                        <div>
+                            <h1>{props.price}</h1>
+                            <h3>{props.place}</h3>
+                            <h4>{props.time}</h4>
+                            {/* <img src={props.image} alt=""/> */}
+                        </div>
+                    )
+                }
+                        

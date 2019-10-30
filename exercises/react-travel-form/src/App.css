@@ -1,0 +1,49 @@
+form {
+  margin: 25px;
+  padding: 0px 20px 25px 25px;
+  background-color: #dedede;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  width: 600px;
+  
+}
+
+
+input {
+  margin: 0px 35px 0px 10px;
+  font-weight: lighter;
+  /* margin-left: 25px; */
+}
+button {
+  margin: 25px 0px 0px 0px;
+  font-size: 15px;
+  height: 35px;
+  width: 75px;
+  border-radius: 5px;
+  background-color: #a22e57;
+  color: white;
+  box-shadow: 2px 2px 3px grey;
+}
+h2{
+  font-size: 24px;
+  text-align: center;
+  /* margin: 0px 0px 25px 0px; */
+  background-color: #a22e57;
+  color: white;
+  padding: 5px;
+  top: -10px;
+  width: 635px;
+  position: relative;
+  left: -25px
+}
+h3{
+  font-size: 20px;
+  margin: 25px 0px 10px 0px;
+  color: #a22e57
+}
+.dropdown {
+  /* margin-left: 25px; */
+  font-size: 15px;
+}
+/* text {
+  margin-left: 25px;
+} */
