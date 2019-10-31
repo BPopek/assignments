@@ -25,7 +25,7 @@ class Form extends Component {
  
         // this.setState({fullName: e.target.value, age: e.target.value})
 
-        // to target specific fields, use the targeted FIELD NAME (input name), not what you put as the "fullName" v
+        // to target specific fields, use the targeted FIELD NAME (input name), not what you put as the "fullName"  MAKES IT DYNAMIC AND NO LONGER HARD CODED.
         this.setState({[e.target.name]: e.target.value})
             // to destructure further: 
         let {name, value} = e.target 
