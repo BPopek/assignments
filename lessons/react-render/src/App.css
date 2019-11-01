@@ -1,0 +1,35 @@
+.app {
+  text-align: center;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+}
+.navbar {
+  display: flex;
+  justify-content: space-around;
+  background-color: lightgoldenrodyellow;
+  padding: 20px;
+  margin: -8px;
+}
+a {
+  font-size: 26px;
+  color: navy;
+  text-decoration: none;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.product{
+  background: yellow;
+  margin: 8px -10px;
+  height: 100vh;
+  text-align: center;
+  padding: 20px;
+}
+.product-list{
+  display: flex;
+  flex-direction: column;
+  font-size: 15px;
+}
+.product-links {
+  font-size: 16px;
+
+}

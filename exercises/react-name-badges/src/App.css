@@ -1,8 +1,36 @@
-div {
-    display: grid;
-    grid-template-columns: 2fr 2fr;
+.MainInput {
+    /* display: grid;
+    grid-template-columns: 2fr 2fr; */
+    margin: 25px;
+    border: 2px solid black;
+    border-radius: 15px;
+    padding: 35px 50px;
 
 }
+Form{
+    display: grid;
+    grid-template-columns: 2fr 2fr;
+    gap: 15px;
+}
+input{
+    height: 30px;
+    border: 2px black solid;
+}
+.InputLeft{
+    grid-column: 1/2;
+
+}
+.InputRight{
+    grid-column: 2/3;
+}
+.TellUs{
+    height: 100px;
+    grid-column: 1/-1;
+    resize: none;
+    border: 2px black solid;
+
+}
+
 .firstName {
     /* display: flex; */
     grid-column: 1/2;
@@ -13,6 +41,47 @@ div {
     grid-column: 2/3;
     grid-row: 1/2;
 }
-.email {
+.button{
+    width: 100px;
+    background-color: lightgray;
+    border-radius: 5px;
+    grid-column: 1/-1;
+    justify-self: center;
+    border: 2px black solid;
+    padding: 3px;
+
+}
+.BadgesBelow{
+    display: grid;
+    grid-template-columns: 2fr 2fr;
+    border: 2px solid black;
+    border-radius: 15px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 25px;
+
+}
+.BadgeHeader {
+    background-color: grey;
+    color: white;
+    grid-column: 1/-1;
+    margin-top: 0px;
+    padding: 5px 5px 5px 25px;
+    border-radius: 12px;
+    font-size: 20px;    
+}
+.BadgeInfo{
+    /* display: grid;
+    grid-template-columns: 2fr 2fr; */
+    gap: 15px;
+    padding: 0px 50px 15px 50px;
+    grid-column: 1/2;
+}
+
+.BadgeInfo2{
+    /* display: grid;
+    grid-template-columns: 2fr 2fr; */
+    gap: 15px;
+    padding: 0px 50px 15px 50px;
+    grid-column: 2/3;
 
 }

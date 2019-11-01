@@ -1,21 +1,21 @@
 import React from 'react';
-// import Person from './Person';
+import Badges from './Badges';
 
 function BadgeContainer(props){
     console.log(props)
-    // const mappedPeopleBadges = props.people.map((person, i) => <Person key={i + person.firstName}
-    //                                                                     firstName={person.firstName}
-    //                                                                     lastName={person.lastName}
-    //                                                                     email={person.email}
-    //                                                                     placeOfBirth={person.placeOfBirth}
-    //                                                                     phone={person.phone}
-    //                                                                     favoriteFood={person.favoriteFood}
-    //                                                                     tellUs={person.tellUs}
-    //                                                                     />)
+    const mappedPeopleBadges = props.badges.map((badge, i) => <Badges key={i + badge.firstName}
+                                                                        firstName={badge.firstName}
+                                                                        lastName={badge.lastName}
+                                                                        email={badge.email}
+                                                                        placeOfBirth={badge.placeOfBirth}
+                                                                        phone={badge.phone}
+                                                                        favoriteFood={badge.favoriteFood}
+                                                                        tellUs={badge.tellUs}
+                                                                        />)
 
 return (
     <div>
-        {/* {mappedPeopleBadges} */}
+        {mappedPeopleBadges}
     </div>
     );
 }

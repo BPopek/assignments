@@ -1,0 +1,99 @@
+* {
+  margin: 0px;
+  padding: 0px;
+}
+.App {
+  text-align: center;
+  display: grid;
+  grid-template-rows: 1fr 10fr 1fr;
+  height: 100vh;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+}
+.Navbar { 
+  display: flex;
+  justify-content: space-around;
+  padding: 25px;
+  background-color: rgb(52, 135, 184);
+  position: sticky;
+  top: 0;
+}
+.Navbar a {
+  font-size: 26px;
+  color: white;
+  text-decoration: none;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.FooterInfo {
+  display: flex;
+  justify-content: space-around;
+  bottom: 0px;
+  color: white;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 20px;
+  height: 50px;
+  line-height: 50px;
+  background-color: rgb(52, 135, 184);
+}
+li{
+  list-style: none;
+}
+.Home {
+  margin: 50px;
+}
+.About {
+  margin: 50px;
+}
+.Services {
+  margin: 50px;
+}
+
+p {
+  margin: 25px 15px 25px 15px;
+  text-align: left;
+}
+.Product{
+  margin: 10px -10px;
+  height: 100vh;
+  text-align: center;
+  padding: 20px;
+
+}
+.product-list div{
+  margin: 0px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr; 
+  gap: 25px;
+  height: 90vh;
+  justify-content: space-evenly;
+
+}
+.product-list {
+  margin: 0px;
+
+  background: rgb(253, 242, 231);
+}
+h1{
+  margin: 25px;
+}
+.product-links a{
+  color: white;
+  /* grid-column: 1/-1; */
+  margin: 25px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  text-decoration: none;
+  font-size: 20px;
+  height: 25px;
+  background: #907163;
+  padding: 18px 15px;
+  border-radius: 5px;
+
+}
+.ProductOptions {
+    grid-column: 1/-1;
+
+}

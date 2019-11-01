@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import BadgeContainer from './BadgeContainer'
 
 class Form extends Component {
     constructor() {
@@ -11,7 +12,7 @@ class Form extends Component {
             phone: '',
             favoriteFood: '',
             tellUs: '',
-            people: [],
+            badges: [],
             validationRules: {minLength: 3}
         }
 
@@ -31,7 +32,7 @@ class Form extends Component {
         }
         this.setState(prevState => {
             return {
-                people: [...prevState.people, newPerson]
+                badges: [...prevState.badges, newPerson]
             }
         })
     }
@@ -40,26 +41,28 @@ class Form extends Component {
         this.setState({[name]: value})
     }
     render(){
-        const styles = {
-            // display: 'grid',
-            // gridTemplateColumns: '1fr, 1fr',
-            // // display: 'flex',
-            // alignItems: 'center',
-            // // flexDirection: 'rows'
-        }
+        // const styles = {
+        //     display: 'grid',
+        //     gridTemplateColumns: '1fr, 1fr',
+        //     // display: 'flex',
+        //     alignItems: 'center',
+        //     // flexDirection: 'rows'
+        // }
         return(
             <div>
-                <form style={styles} onSubmit={this.handleSubmit}>
-                    <input type='text' placeholder='First Name' name='firstName' value={this.state.firstName} onChange={this.handleChange}/>
-                    <input type='text' placeholder='Last Name' name='lastName' value={this.state.lastName} onChange={this.handleChange}/>
-                    <input type='email' placeholder='Email' name='email' value={this.state.email} onChange={this.handleChange}/>
-                    <input type='text' placeholder='Place of Birth' name='placeOfBirth' value={this.state.placeOfBirth} onChange={this.handleChange}/>
-                    <input type='tel' placeholder='Phone' name='phone' pattern='[0-9]{10}'value={this.state.phone} onChange={this.handleChange}/>
-                    <input type='text' placeholder='Favorite Food' name='favoriteFood' value={this.state.favoriteFood} onChange={this.handleChange}/>
-                    <input type='text' placeholder='Tell us about yourself' name='tellUs' value={this.state.tellUs} onChange={this.handleChange}/>
-                    <button type='button' disabled={this.state.validationRules}>Submit</button>
+                <form className='MainInput' onSubmit={this.handleSubmit}>
+                    <input type='text' placeholder='First Name' className='InputLeft' name='firstName' value={this.state.firstName} onChange={this.handleChange} minlength='3'/>
+                    <input type='text' placeholder='Last Name' className='InputRight' name='lastName' value={this.state.lastName} onChange={this.handleChange} minlength='3'/>
+                    <input type='email' placeholder='Email' className='InputLeft'name='email' value={this.state.email} onChange={this.handleChange} minlength='3'/>
+                    <input type='text' placeholder='Place of Birth' className='InputRight'name='placeOfBirth' value={this.state.placeOfBirth} onChange={this.handleChange} minlength='3'/>
+                    <input type='tel' placeholder='Phone' className='InputLeft' name='phone' pattern='[0-9]{10}' value={this.state.phone} onChange={this.handleChange} minlength='3'/>
+                    <input type='text' placeholder='Favorite Food' className='InputRight' name='favoriteFood' value={this.state.favoriteFood} onChange={this.handleChange} minlength='3'/>
+                    <textarea type='text' placeholder='Tell us about yourself' className='TellUs' name='tellUs' value={this.state.tellUs} onChange={this.handleChange} minlength='3'/>
+                    <button className='button'>Submit</button>
                 </form>
-                
+                <div>
+                    <BadgeContainer badges={this.state.badges} />
+                </div>
             </div>
         )
     }
