@@ -2,8 +2,18 @@ import React from 'react';
 
 const Badges = (props) => {
     let{firstName, lastName, placeofBirth, phone, favoriteFood, email, tellUs} = props
+    // this.state = {
+    //     backgroundColor: 'red'
+    // }
+    // this.changeColor = this.changeColor.bind(this);
+    // changeColor(backgroundColor); {
+    //    this.setState({
+    //        backgroundColor
+    //     }); 
+    // }
+  
     return(
-        <div className='BadgesBelow'>
+        <div className='BadgesBelow' /*style={this.state} nthChild={() => this.changeColor('blue')}*/>
             <h1 className='BadgeHeader'>Badge:</h1>
             <p className='BadgeInfo'>Name: {firstName} {lastName}</p>
             <p className='BadgeInfo2'>Phone: {phone}</p>

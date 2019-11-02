@@ -35,6 +35,14 @@ class Form extends Component {
                 badges: [...prevState.badges, newPerson]
             }
         })
+// **************
+        function enableButton() {
+            if(firstName || lastName || placeofBirth || phone || favoriteFood || email || tellUs === ' '){
+                document.getElementById('button').disabled = true;
+            } else {
+                document.getElementById('button').disabled = false
+            }
+        }
     }
     handleChange = e => {
         let {name, value} = e.target
@@ -58,7 +66,7 @@ class Form extends Component {
                     <input type='tel' placeholder='Phone' className='InputLeft' name='phone' pattern='[0-9]{10}' value={this.state.phone} onChange={this.handleChange} minlength='3'/>
                     <input type='text' placeholder='Favorite Food' className='InputRight' name='favoriteFood' value={this.state.favoriteFood} onChange={this.handleChange} minlength='3'/>
                     <textarea type='text' placeholder='Tell us about yourself' className='TellUs' name='tellUs' value={this.state.tellUs} onChange={this.handleChange} minlength='3'/>
-                    <button className='button'>Submit</button>
+                    <button className='button' /*disabled='disabled'*/ id='button'>Submit</button>
                 </form>
                 <div>
                     <BadgeContainer badges={this.state.badges} />
