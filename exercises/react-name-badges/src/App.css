@@ -28,7 +28,6 @@ input{
     grid-column: 1/-1;
     resize: none;
     border: 2px black solid;
-
 }
 
 .firstName {
@@ -65,23 +64,24 @@ input{
     color: white;
     grid-column: 1/-1;
     margin-top: 0px;
-    padding: 5px 5px 5px 25px;
-    border-radius: 12px;
-    font-size: 20px;    
+    padding: 15px 15px 15px 50px;
+    border-radius: 12px 12px 0px 0px;
+    font-size: 25px;    
 }
 .BadgeInfo{
-    /* display: grid;
-    grid-template-columns: 2fr 2fr; */
+
     gap: 15px;
     padding: 0px 50px 15px 50px;
     grid-column: 1/2;
 }
 
 .BadgeInfo2{
-    /* display: grid;
-    grid-template-columns: 2fr 2fr; */
+
     gap: 15px;
     padding: 0px 50px 15px 50px;
     grid-column: 2/3;
 
+}
+p.TellUs{
+    margin: 0px 50px 25px 50px;
 }

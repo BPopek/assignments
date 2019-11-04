@@ -4,6 +4,7 @@ import Badges from './Badges';
 function BadgeContainer(props){
     console.log(props)
     const mappedPeopleBadges = props.badges.map((badge, i) => <Badges key={i + badge.firstName}
+                                                                        color={i}
                                                                         firstName={badge.firstName}
                                                                         lastName={badge.lastName}
                                                                         email={badge.email}
@@ -12,7 +13,7 @@ function BadgeContainer(props){
                                                                         favoriteFood={badge.favoriteFood}
                                                                         tellUs={badge.tellUs}
                                                                         />)
-
+                                                                   
 return (
     <div>
         {mappedPeopleBadges}

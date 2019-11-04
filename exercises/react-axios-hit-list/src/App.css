@@ -1,0 +1,70 @@
+* {
+  margin: 0px; 
+  padding: 0px;
+}
+
+ol {
+  list-style: none;
+}
+.Navbar > p {
+  display: flex;
+  background-color: black;
+  height: 75px;
+  width: 100%;
+  color: red;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-weight: lighter;
+  line-height: 75px;
+  font-size: 26px;
+  margin: 0px;
+}
+.Mapped {
+  display: grid;
+  grid-template-columns: 150px 150px 150px;
+  grid-template-rows: 200px 200px 200px;
+  gap: 25px;
+  margin: 50px 200px 50px 200px;
+  /* margin-top: 50px;
+  margin-bottom: 50px;
+  margin-left: auto;
+  margin-right: auto; */
+
+}
+h1 {
+  font-size: 14px;
+  background: rgba(0, 89, 255, 0.459);
+  color: rgb(245, 242, 236);
+  /* font-family: 'Franklin Gothic', 'Arial Narrow', Arial, sans-serif; */
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-weight: 100;
+  position: absolute;
+  bottom: 0px;
+  left: 0;
+  margin: 0px;
+  width: 100%;
+  text-align: center;
+  height: 30px;
+  line-height: 30px;
+}
+.TextNames{
+  position: relative;
+}
+.Navbar > img {
+  height: 75px;
+  width: auto;
+}
+p.Header {
+  /* display: flex; */
+  padding-left: 100px;
+}
+img{
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 150px;
+  height: 200px;
+  object-fit: cover;
+}
+body {
+  background-image: url('https://santanol.com/wp-content/uploads/2016/02/Santanol-Paper-Background.jpg')
+}

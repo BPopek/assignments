@@ -15,7 +15,6 @@ class Form extends Component {
             badges: [],
             validationRules: {minLength: 3}
         }
-
     }
     handleSubmit = e => {
         e.preventDefault()
@@ -30,32 +29,24 @@ class Form extends Component {
             email, 
             tellUs
         }
-        this.setState(prevState => {
-            return {
-                badges: [...prevState.badges, newPerson]
-            }
-        })
-// **************
-        function enableButton() {
-            if(firstName || lastName || placeofBirth || phone || favoriteFood || email || tellUs === ' '){
-                document.getElementById('button').disabled = true;
-            } else {
-                document.getElementById('button').disabled = false
-            }
-        }
+        if (firstName === '' || lastName === '' || placeofBirth === '' || phone === '' || favoriteFood === '' || email === '' || tellUs.length < 3){
+            alert ('You must enter at least 3 characters in all input fields.')
+        } else {
+            this.setState(prevState => {
+                return {
+                    badges: [...prevState.badges, newPerson]
+                }
+            })
+        } 
     }
+
+    
     handleChange = e => {
         let {name, value} = e.target
         this.setState({[name]: value})
     }
     render(){
-        // const styles = {
-        //     display: 'grid',
-        //     gridTemplateColumns: '1fr, 1fr',
-        //     // display: 'flex',
-        //     alignItems: 'center',
-        //     // flexDirection: 'rows'
-        // }
+  
         return(
             <div>
                 <form className='MainInput' onSubmit={this.handleSubmit}>
@@ -66,7 +57,7 @@ class Form extends Component {
                     <input type='tel' placeholder='Phone' className='InputLeft' name='phone' pattern='[0-9]{10}' value={this.state.phone} onChange={this.handleChange} minlength='3'/>
                     <input type='text' placeholder='Favorite Food' className='InputRight' name='favoriteFood' value={this.state.favoriteFood} onChange={this.handleChange} minlength='3'/>
                     <textarea type='text' placeholder='Tell us about yourself' className='TellUs' name='tellUs' value={this.state.tellUs} onChange={this.handleChange} minlength='3'/>
-                    <button className='button' /*disabled='disabled'*/ id='button'>Submit</button>
+                    <button className='button' id='button'>Submit</button>
                 </form>
                 <div>
                     <BadgeContainer badges={this.state.badges} />
