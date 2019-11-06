@@ -15,8 +15,21 @@ class App extends Component {
   }
   componentDidMount(){
       axios.get('https://api.vschool.io/bob/todo').then(res => {
-        this.setState({todos:res.data.reverse()})
+        this.setState({todos: res.data.reverse()})
       })
+  }
+
+  handleDelete = (id) => {
+    axios.delete('https://api.vschool.io/bob/todo/' + id).then(response => {
+      console.log(response)
+    this.setState((prevState) => {
+      const todos = prevState.todos.filter(todo => {
+        return todo._id !== id
+      })
+      return {todos: todos}   //can simplify to { todos }
+    }
+    )
+    })
   }
 
   handleSubmit = (todo) => {
@@ -26,14 +39,34 @@ class App extends Component {
       })
     })
   }
+  handleSave = (updates, id) => {
+    axios.put('https://api.vschool.io/bob/todo/' + id, updates).then(response => {
+      this.setState(prevState => {
+        const todos = [...prevState.todos]   //makes a copy so you don't have to worry about changing prevstate
+        const index = todos.findIndex(todo => {
+          return todo._id === id
+        })
+        todos[index] = response.data
+        return { todos }    //same as {todos: todos}
+      })
+    })
+  }
+
 
   render(){
-
+    const style = {
+      display: 'flex',
+      flexDirection: 'column',
+      alignItems: 'center'
+    }
 
     return (
-      <div>
+      <div style = {style}>
          <Form handleSubmit={this.handleSubmit}/>
-         <ToDoList todos={this.state.todos}/>
+         <ToDoList 
+            handleDelete={this.handleDelete} 
+            todos={this.state.todos} 
+            handleSave={this.handleSave}/>
       </div>
     );
   }

@@ -6,16 +6,72 @@ class ToDo extends Component {
         super(props)
         
         this.state = {
-
+            title: props.title,           //sets a default state to whatever the props are 
+            description: props.description,
+            imgUrl: props.imgUrl,
+            isBeingEdited: false
         }
     }
-    render(){
-        return(
-            <div>
-                <h1>{this.props.title}</h1>
-            </div>
-        )
+
+    handleEditToggle = () => {
+        this.setState(prevState => {
+            return { isBeingEdited: !prevState.isBeingEdited }
+        })
+    }
+    handleSave = () => {
+        this.handleEditToggle() 
+        this.props.handleSave(this.state, this.props._id)
+    }
+    handleChange = (e) => {
+        this.setState({[e.target.name] : e.target.value})
+    }
+    checkBox = (e) => {
+        this.props.handleSave({completed: e.target.checked}, this.props._id)
     }
 
-}
+    render(){
+        const style = {
+            border: '2px black solid',
+            padding: '10px',
+            textAlign: 'center'
+
+        }
+        const imageSize = {
+            width: 100,
+            height: 100,
+        }
+        const lineThrough = {
+            textDecoration: this.props.completed ? 'line-through' : 'none'
+        }
+
+        // return(
+            const regularDisplay = (
+                <div style={style}>
+                    <h1 style={lineThrough}>{this.props.title}</h1>
+                    <p>{this.props.description}</p>
+                    <img style={imageSize} src={this.props.imgUrl} alt={this.props.title} />
+                    <div>Completed 
+                        <input onChange={this.checkBox} checked={ this.props.completed ? true : false } type='checkbox'/>
+                    </div> 
+                    <button onClick={this.handleEditToggle}>Edit</button>
+                    <button onClick={ () => this.props.handleDelete(this.props._id) }>X</button>
+                </div>
+            )
+        
+                
+            const form = (
+            <div style={style}>
+                <form>
+                    title: <input onChange={this.handleChange} name='title' value={this.state.title}/>
+                    description: <input onChange={this.handleChange} name='description' value={this.state.description}/>
+                    img: <input onChange={this.handleChange} name='imgUrl' value={this.state.imgUrl}/>
+                    <button onClick={this.handleSave}>Save</button>
+                    </form>
+                </div>
+            )   
+            return this.state.isBeingEdited ? form : regularDisplay         
+        }
+    }
+
+
 export default ToDo;

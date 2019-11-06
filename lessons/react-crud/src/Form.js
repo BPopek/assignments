@@ -6,11 +6,11 @@ class Form extends Component {
         super(props)
         
         this.state = {
-            title: ''
+            title: '',
+            imgUrl: '',
+            description: ''
         }   
                     // needs to be the same name from the API
-
-
     }
 
     handleChange = (e) => {
@@ -20,14 +20,46 @@ class Form extends Component {
         e.preventDefault()
         this.props.handleSubmit(this.state)
         this.setState({
-            title: ''
+            title: '',
+            imgUrl: '',
+            description: ''
         })
     }
 
     render(){
+        const style = {
+            display: 'flex',
+            flexDirection: 'column',
+            height: '120px',
+            justifyContent: 'space-around',
+            alignItems: 'center',
+            border: '2px solid black',
+            padding: '20px',
+            textAlign: 'center'
+        }
         return(
-            <form onSubmit={this.handleSubmit}>
-                <input onChange={this.handleChange} value={this.state.title} name='title' />
+            <form onSubmit={this.handleSubmit} style={style}>
+                <label htmlFor='title'>Title:
+                    <input 
+                        id='title' 
+                        onChange={this.handleChange} 
+                        value={this.state.title} 
+                        name='title' />
+                        </label>
+                <label htmlFor='img'>Image Url:
+                    <input 
+                        id='img' 
+                        onChange={this.handleChange} 
+                        value={this.state.imgUrl} 
+                        name='imgUrl' />
+                        </label>
+                <label htmlFor='description'>Description:
+                    <input 
+                        id='description' 
+                        onChange={this.handleChange} 
+                        value={this.state.description} 
+                        name='description' />   
+                        </label>             
                 <button>Submit</button>
             </form>
         )
