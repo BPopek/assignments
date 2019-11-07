@@ -1,0 +1,72 @@
+* {
+  margin: 0;
+  padding: 0;
+
+}
+.container {
+  display: grid;
+  grid-template-rows: 100px 100px;
+  justify-content: space-around;
+  margin: auto;
+  margin-bottom: 25px;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  background-color: green;
+}
+.form {
+  margin: 50px;
+}
+.initialInput {
+  width: 200px;
+  height: 30px;
+  margin: 10px;
+}
+.submitButton {
+  margin: auto;
+  margin-top: 20px;
+  display: block;
+  width: 100px;
+  height: 45px;
+  text-align: center;
+  line-height: 45px;
+  border-radius: 5px;
+  background-color: lightgrey;
+  font-size: 15px;
+}
+label {
+  margin-left: 20px
+}
+/* .postContainer{ */
+  /* margin-top: 50px; */
+  /* padding: 50px; */
+/* } */
+.newPosts {
+  /* display: flex;
+  flex-direction: row; */
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: auto;
+  /* margin: 50px 50px 50px 50px; */
+  padding: 0px 50px;
+  grid-gap: 25px;
+  text-align: center;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+h1 {
+  margin: 10px
+}
+p {
+  margin: 5px
+
+}
+.completed {
+  padding: 5px;  
+  margin-top: 10px;
+}
+input {
+  margin-left: 5px;
+}
+.editDel {
+  padding: 5px 10px;
+  margin: 10px;
+  border-radius: 5px;
+}

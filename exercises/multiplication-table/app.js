@@ -7,9 +7,9 @@
 //    ...
 //  ]
 
-multTable(){
+// multTable(){
 
-BOTH OF THE BELOW 
+// BOTH OF THE BELOW 
 
 
 let n = 10
