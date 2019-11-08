@@ -35,10 +35,6 @@
 label {
   margin-left: 20px
 }
-/* .postContainer{ */
-  /* margin-top: 50px; */
-  /* padding: 50px; */
-/* } */
 .newPosts {
   /* display: flex;
   flex-direction: row; */
@@ -58,15 +54,22 @@ p {
   margin: 5px
 
 }
-.completed {
+/* .completed {
   padding: 5px;  
   margin-top: 10px;
-}
+} */
 input {
   margin-left: 5px;
 }
-.editDel {
+.edit {
+  display: block;
   padding: 5px 10px;
-  margin: 10px;
+  margin: 10px auto;
+  border-radius: 5px;
+}
+.Del {
+  display: block;
+  padding: 5px 10px;
+  margin: auto;
   border-radius: 5px;
 }

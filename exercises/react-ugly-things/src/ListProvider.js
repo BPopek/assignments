@@ -5,48 +5,57 @@ class ListProvider extends Component {
     constructor(){
         super()
         this.state = {
-            title: '',
-            description: '',
-            imgUrl: '',
+            // title: '',
+            // description: '',
+            // imgUrl: '',
             posts: [],
-            completed: false
+            // completed: false
         }
     }
-    handleSubmit = (e) => {
-        e.preventDefault()
-        let {title, description, imgUrl} = this.state
+    // handleSubmit = (e) => {
+    //     e.preventDefault()
+    //     let {title, description, imgUrl} = this.state
 
-        const NewPost = {
-            title,
-            description,
-            imgUrl
-        }
-        this.setState(prevState => {
-            return {posts: [...prevState.posts, NewPost]}
-        })
-    }
-    addNewPost = () => {
-        let {title, description, imgUrl} = this.state
-
-        const NewPost = {
-            title,
-            description,
-            imgUrl
-        }
-        this.setState(prevState => {
-            return {posts: [...prevState.posts, NewPost]}
-        })
-    }
-    handleChange = (e) => {
-        this.setState({[e.target.name]: e.target.value})
-    }
-    // editPost = () => {
+    //     const NewPost = {
+    //         title,
+    //         description,
+    //         imgUrl
+    //     }
     //     this.setState(prevState => {
-    //         return {
-    //             posts: prevState.post.map(post => post === title ? res.data : post)
-    //         }
+    //         return {posts: [...prevState.posts, NewPost]}
     //     })
     // }
+    // addNewPost = () => {
+    //     let {title, description, imgUrl} = this.state
+    //     const NewPost = {
+    //         title,
+    //         description,
+    //         imgUrl
+    //     }
+    //     this.setState(prevState => {
+    //         return {posts: [...prevState.posts, NewPost]}
+    //     })
+        // console.log('new post added')
+    // }
+    // handleChange = (e) => {
+    //     this.setState({[e.target.name]: e.target.value})
+    // }
+    editPost = (post, title) => {
+        this.setState(prevState => {
+            const copyPrevious = [...prevState.posts]
+            const index = copyPrevious.findIndex(post => post.title === title)
+            copyPrevious.splice(index, 1, post)
+            return {
+                posts: copyPrevious
+            }
+        })
+    }
+
+    addNewPost = (NewPost) => {
+        this.setState(prevState => {
+            return {posts: [...prevState.posts, NewPost]}
+        })
+    }
     handleDelete = () => {
         this.setState(prevState => {
             return {
@@ -55,27 +64,22 @@ class ListProvider extends Component {
         })
     }
 
-    handleSave = () => {
-        this.handleEditToggle()
-        this.props.handleSave(this.state)
-    }
-    checkbox = (e) => {
-        this.props.handleSave({completed: e.target.checked})
-    }
+    // handleSave = () => {
+    //     this.handleEditToggle()
+    //     this.props.handleSave(this.state)
+    // }
+    // checkbox = (e) => {
+    //     this.props.handleSave({completed: e.target.checked})
+    // }
 
     render(){
         return(
             <Provider value={{
                 ...this.state,
-                handleChange: this.handleChange,
-                handleSubmit: this.handleSubmit,
                 handleSave: this.handleSave,
-                checkbox: this.checkbox,
-                handleEditToggle: this.handleEditToggle,
-                addNewPost: this.addNewPost
-
-                //toggle
-
+                addNewPost: this.addNewPost,
+                handleDelete: this.handleDelete,
+                editPost: this.editPost
                 }}>
                     {this.props.children}
             </Provider>

@@ -6,11 +6,19 @@ class Form extends Component {
         super(props)
 
         this.state = {
-            title: '',
-            description: '',
-            imgUrl: '',
+            title: props.title,
+            description: props.description,
+            imgUrl: props.imgUrl,
         }
     }
+
+    componentDidMount(){
+        if(this.props.type === 'update'){
+            let {title, description, imgUrl} = this.props.post
+            this.setState({title, description, imgUrl})
+        }
+    }
+
     handleChange = e => {
         this.setState({[e.target.name]: e.target.value})
     }
@@ -18,10 +26,10 @@ class Form extends Component {
     handleSubmit = e => {
         e.preventDefault()
         if(this.props.type === 'add'){
-            this.props.addNewPost(this.state)
+            this.props.addNewPost({...this.state})
         } else {
-            this.props.editPost(this.props.post, this.state)
             this.props.toggle()
+            this.props.editPost({...this.props.post, ...this.props.state}, this.props.title)
         }
     }
     render(){
