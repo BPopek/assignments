@@ -6,7 +6,8 @@ import ExhibitionsContainer from './ExhibitionsContainer';
 import Footer from './Footer';
 import './App.css'
 import ExhibitionDetails from './ExhibitionDetails';
-import RandomObject from './RandomObject'
+import RandomObject from './RandomObject';
+import Search from './Search'
 
 
 function App () {
@@ -19,6 +20,7 @@ function App () {
                     <Route path='/past-exhibitions' component={ExhibitionsContainer} />
                     <Route path='/detailed-exhibitions/:id' component={ExhibitionDetails} />
                     <Route path='/random-object' component={RandomObject} />
+                    <Route path='/search' component={Search} />
                 </Switch>
             <Footer />
         </div>

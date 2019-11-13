@@ -1,13 +1,13 @@
 import React, {Component} from 'react';
 import {withExhibitions} from './ExhibitionProvider';
-// import {Link} from 'react-router-dom'
+import {Link} from 'react-router-dom'
 
-class RandomObject extends Component {
+class SearchDetailPage extends Component {
     
-    componentDidMount(){
-        // console.log(this.props.object)
-         !this.props.random.title ? this.props.randomObject() : console.log('already have random item')
-    }
+    // componentDidMount(){
+    //     // console.log(this.props.object)
+    //      !this.props.random.title ? this.props.randomObject() : console.log('already have random item')
+    // }
     render(){
         const {title, url, description, images, id} = this.props.random
         let myPic;
@@ -20,9 +20,9 @@ class RandomObject extends Component {
         }
 
         return(
-                <div className='RandomObject'>
-                    <h1 className='RandomObjectTitle'>{title}</h1>
-                    <a href={url} className='ExhibitionLink'>Visit Cooper Hewitt </a>
+                <div className='SearchObject'>
+                    <h1 className='SearchedTitle'>{title}</h1>
+                    <a href={url} className='ExhibitionLink'>Visit Cooper Hewitt Website</a>
                     <p className='ExhibitDescription'>{description}</p>
                     <img src={myPic} className='RandomImages' alt='RandomImage'/>
                     <img src={myPic1} className='RandomImages' alt='RandomImage'/>
@@ -31,4 +31,4 @@ class RandomObject extends Component {
     }
 }
 
-export default withExhibitions(RandomObject);
+export default withExhibitions(SearchDetailPage);

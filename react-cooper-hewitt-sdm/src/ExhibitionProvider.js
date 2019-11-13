@@ -20,10 +20,11 @@ class ExhibitionProvider extends Component {
             random: 
                 {title:'', 
                 url:'', 
-                text:'', 
+                description:'', 
                 image:'',
                 id:''
-                }
+                },
+            searchRes: []
         }
     }
     getExhibitions = () => {
@@ -36,14 +37,26 @@ class ExhibitionProvider extends Component {
     singleExhibition = (id) => {
         axios.get('https://api.collection.cooperhewitt.org/rest/?method=cooperhewitt.exhibitions.getInfo&access_token=df5560cefa01711f7f03b561eb43f675&exhibition_id=' + id).then(res => {
             // console.log(res.data)
-            this.setState({detail: res.data.exhibition
-            })
+            this.setState({detail: res.data.exhibition})
         })
     }
     randomObject = () => {
         axios.get('https://api.collection.cooperhewitt.org/rest/?method=cooperhewitt.objects.getRandom&access_token=df5560cefa01711f7f03b561eb43f675&has_image=1').then(res => {
-            console.log(res.data.object.images)
-            this.setState({random: res.data.object})
+            // console.log(res.data.object.images)
+            this.setState({random: res.data.objects})
+        })
+    }
+
+    // searchCollection = (query, description, title, type) => {
+    //     axios.get(`https://api.collection.cooperhewitt.org/rest/?method=cooperhewitt.search.collection&access_token=df5560cefa01711f7f03b561eb43f675&query=${query}&description=${description} &title=${title} &type=${type}`).then(res => {
+    //         console.log(res.data)
+    //         this.setState({search: res.data.object})
+    //     })
+    // }
+    searchCollection = (query) => {
+        axios.get(`https://api.collection.cooperhewitt.org/rest/?method=cooperhewitt.search.collection&access_token=df5560cefa01711f7f03b561eb43f675&query=${query}`).then(res => {
+            // console.log(res.data)
+            this.setState({searchRes: res.data.objects})
         })
     }
     
@@ -54,6 +67,7 @@ class ExhibitionProvider extends Component {
                 getExhibitions: this.getExhibitions,
                 singleExhibition: this.singleExhibition,
                 randomObject: this.randomObject,
+                searchCollection: this.searchCollection,
                 }}>
                 {this.props.children}
             </Provider>

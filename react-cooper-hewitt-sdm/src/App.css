@@ -23,11 +23,13 @@ body {
     width: 100vw;
     margin: 0;
 }
+.Navbar-link {
+    color: white;
+}
 
-
-/* a.Navbar-link :active {
+a.Navbar-link :active {
     color: #806aaf;
-} */
+}
 
 .Footer {
     display: flex;
@@ -50,7 +52,6 @@ body {
 
 a {
     text-decoration: none;
-    color: white;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     font-size: 11px;
     text-decoration: none;
@@ -240,6 +241,10 @@ th {
     text-align: center;
     color: #806aaf;
     width: 80vw;
+}
+.SearchResults {
+    color: black;
+    display: block;
 }
 
 @media screen and (min-width: 650px) {
