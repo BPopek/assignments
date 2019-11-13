@@ -7,7 +7,7 @@ class ExhibitionDetails extends Component {
     }
     render(){
 
-        const {title, url, text, date_start, date_end, id} = this.props.detail
+        const {title, url, text, images} = this.props.detail
     
         return(
             <div className='ExhibitionDetails' >
@@ -15,7 +15,7 @@ class ExhibitionDetails extends Component {
                 {/* <img src={url}/> */}
                 <a href={url} className='DetailedLink'>For More Info, Visit: {url}</a>
                 <p className='DetailedDescription'>{text}</p>
-                <h5 className='DetailedDate'>Start Date: {date_start}&emsp;•&emsp;End Date: {date_end}</h5>
+              
             </div>
         )
     }

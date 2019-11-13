@@ -3,6 +3,7 @@ import {withExhibitions} from './ExhibitionProvider';
 import CurrentExhibitions from './CurrentExhibitions';
 import PastExhibitions from './PastExhibitions';
 
+
 class ExhibitionsContainer extends Component {
     
     componentDidMount(){

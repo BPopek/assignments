@@ -28,4 +28,4 @@ class PastExhibitions extends Component {
     }
 }
 
-export default PastExhibitions;
+export default withExhibitions(PastExhibitions);

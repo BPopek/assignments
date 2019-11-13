@@ -2,13 +2,17 @@
     margin: 0;
     padding: 0;
 }
+#root {
+    margin: 0;
+    padding: 0;
+}
 body {
-    margin-bottom: 70px;
+    margin-bottom: 60px;
 }
 .MainDiv {
-    /* margin: 0; */
-    /* padding: 0; */
-    width: 100%;
+    margin: 0;
+    padding: 0;
+    
 }
 .Navbar {
     display: flex;
@@ -16,7 +20,14 @@ body {
     height: 40px;
     background-color: black;
     line-height: 40px;
+    width: 100vw;
+    margin: 0;
 }
+
+
+/* a.Navbar-link :active {
+    color: #806aaf;
+} */
 
 .Footer {
     display: flex;
@@ -25,12 +36,12 @@ body {
     bottom: 0;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     height: 40px;
-    width: 100%;
+    width: 100vw;
     background-color: black;
     color: white;
     line-height: 40px;
     margin-bottom: 0px;
-    font-size: 13px;
+    font-size: 11px;
 }
 .logo { 
     height: 25px;
@@ -41,69 +52,81 @@ a {
     text-decoration: none;
     color: white;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    width: 100%;
-    font-size: 13px;
+    font-size: 11px;
     text-decoration: none;
+}
+.ExhibitionContainer {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    gap: 10px;
+    margin: 10px 25px 0px 25px;
+ 
 }
 
 .ExhibitDescription {
-    margin: 15px 0px;
+    margin: 15px 0px 10px 0px;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     color: black;
-    font-size: 13px;
+    font-size: 12px;
+    line-height: 1.4;
+    display: block;
+    display: -webkit-box;
+    height: 30px;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    /* min-width: 0; */
+    text-overflow: ellipsis;
 }
 
 .CurrExhibTitle {
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     text-align: center;
     color: #806aaf;
-    padding: 15px 0px;
-    width: 100%;
-    font-size: 16px;    
+    padding: 10px 0px 5px 0px;
+    font-size: 15px;    
     margin-bottom: 5px;
-
 }
 
 .ExhibitionList {
-    margin: 10px 0px 0px 25px;
     background-color: #dedede;
-    padding: 0px 35px 20px 35px;
-    z-index: 0;
+    padding: 0px 15px 20px 15px;
+    /* z-index: 0; */
     text-align: center;
-    border-radius: 10px;
+    border-radius: 5px;
+    /* margin: 10px 0px 0px 0px; */
+    height: 130px;
+    /* box-sizing: border-box; */
 }
+
 .ExhibitionList:hover {
     transition: all 0.2s ease-out;
     box-shadow: 2px 6px 8px rgba(38, 38, 38, 0.2);
     top: -4px;
     border: 2px solid #cccccc;
     background-color: white;
-    border-radius: 10px;
+    border-radius: 5px;
 }
 .ExhibitionList:hover > .CurrExhibTitle {
     color: white;
     background-color: #806aaf;
-    /* border-bottom-left-radius: 30px;
-    border-bottom-right-radius: 30px; */
+    font-size: 15px;
 }
 
 .ExhibitionList:hover > .date{
     color: #806aaf;
-    font-size: 14.5px;
+    /* font-size: 12px; */
 }
 
 .ExhibitionList:before {
     content: "";
-    position: absolute;
     z-index: -1;
     top: -20px;
     right: -20px;
-    /* background: #00838d; */
-    /* height: 32px;
-    width: 32px; */
     border-radius: 32px;
     transform: scale(4);
-    transform-origin: 50% 50%;
+    /* transform-origin: 50% 50%; */
     transition: transform 0.2s ease-out;
 }
 .ExhibitionList:hover:before {
@@ -112,16 +135,23 @@ a {
 
 .ExhibitionLink {
     color: #606060;
-    font-size: 12px;
+    font-size: 11px;
+    display: inline-block;
+    /* display: -webkit-box;
+    height: 14px;
+    -webkit-line-clamp: 1; */
+    /* -webkit-box-orient: horizontal; */
+    overflow: hidden;
+    /* min-width: 0;*/
+    white-space: nowrap; 
+    /* overflow-wrap: break-all; */
+    /* word-wrap: break-all; */
+    max-width: 60%;
+    text-overflow: ellipsis;
+    /* box-sizing: border-box; */
 }
 
-.ExhibitionContainer {
-    display: grid;
-    width: 100%;
-    grid-template-columns: 1fr;
-    grid-template-rows: auto;
-    gap: 10px;
-}
+
 .text {
     margin: 0px;
 }
@@ -129,7 +159,8 @@ a {
     display: inline-block;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     color: black;
-    font-size: 10px;
+    font-size: 11px;
+    line-height: 1.8;
 }
 .HomeHeader {
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
@@ -147,8 +178,8 @@ a {
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: auto;
+    width: 90%;
     gap: 15px;
-    /* box-shadow:  5px 5px 5px black; */
     margin: 10px 25px;
 }
 .HomeDescription {
@@ -176,10 +207,13 @@ tr:nth-child(even) {
     background-color:#f2f2f2
 }
 hr {
-    width: 100%;
+    width: 90%;
 }
 th {
     color: #806aaf
+}
+.table {
+    width: 100%;
 }
 .ExhibitionDetails {
     margin: 25px;
@@ -188,38 +222,48 @@ th {
 .DetailedTitle {
     color: #806aaf;
     font-size: 22px;
-    margin-bottom: 15px;
+    margin-bottom: 14px;
 }
 .DetailedDescription {
-    line-height: 1.3;
+    line-height: 1.4;
     font-size: 14px;
-    margin-top: 15px;
+    margin-top: 13px;
+    width: 80vw;
 }
 .DetailedLink {
     color: #606060;
     margin: 15px 0px;
+    font-size: 12px;
 }
 .DetailedDate {
     margin: 25px 0px;
     text-align: center;
     color: #806aaf;
-
+    width: 80vw;
 }
 
 @media screen and (min-width: 650px) {
     .ExhibitionContainer {
         display: grid;
-        width: 100%;
+        /* width: 100vw;  */
         grid-template-columns: 1fr 1fr;
         grid-template-rows: auto;
+        gap: 25px;
+    }
+    /* .MainDiv {
+        width: 50vw;
+    } */
+    .Footer {
+        /* width: 95vw; */
     }
 }
 
 @media screen and (min-width: 1000px) {
     .ExhibitionContainer {
         display: grid;
-        grid-template-columns: auto auto auto;
-        grid-template-rows: auto;
-        gap: 15px;
+        /* width: 92vw; */
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: auto; 
+        gap: 15px; 
     }
 }
