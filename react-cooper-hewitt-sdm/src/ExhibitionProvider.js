@@ -24,7 +24,14 @@ class ExhibitionProvider extends Component {
                 image:'',
                 id:''
                 },
-            searchRes: []
+            searchRes: [],
+            searchDetail: 
+                {title:'', 
+                url:'', 
+                description:'', 
+                image:'',
+                id:''
+                }
         }
     }
     getExhibitions = () => {
@@ -40,10 +47,18 @@ class ExhibitionProvider extends Component {
             this.setState({detail: res.data.exhibition})
         })
     }
+
+    searchDetailObject = (id) => {
+        axios.get('https://api.collection.cooperhewitt.org/rest/?method=cooperhewitt.objects.getInfo&access_token=df5560cefa01711f7f03b561eb43f675&object_id=' + id).then(res => {
+            // console.log(res.data)
+            this.setState({searchDetail: res.data.object})
+        })
+    }
+
     randomObject = () => {
         axios.get('https://api.collection.cooperhewitt.org/rest/?method=cooperhewitt.objects.getRandom&access_token=df5560cefa01711f7f03b561eb43f675&has_image=1').then(res => {
             // console.log(res.data.object.images)
-            this.setState({random: res.data.objects})
+            this.setState({random: res.data.object})
         })
     }
 
@@ -54,11 +69,13 @@ class ExhibitionProvider extends Component {
     //     })
     // }
     searchCollection = (query) => {
+        // console.log(query)
         axios.get(`https://api.collection.cooperhewitt.org/rest/?method=cooperhewitt.search.collection&access_token=df5560cefa01711f7f03b561eb43f675&query=${query}`).then(res => {
             // console.log(res.data)
             this.setState({searchRes: res.data.objects})
         })
     }
+    
     
     render(){
         return(
@@ -68,6 +85,7 @@ class ExhibitionProvider extends Component {
                 singleExhibition: this.singleExhibition,
                 randomObject: this.randomObject,
                 searchCollection: this.searchCollection,
+                searchDetailObject: this.searchDetailObject,
                 }}>
                 {this.props.children}
             </Provider>
