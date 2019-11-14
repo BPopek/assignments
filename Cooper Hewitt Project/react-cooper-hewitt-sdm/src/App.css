@@ -1,0 +1,581 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+#root {
+    margin: 0;
+    padding: 0;
+}
+body {
+    margin-bottom: 60px;
+}
+@import url('https://fonts.googleapis.com/css?family=Raleway:light,regular,bold,italic|Lato:light,regular,bold,black,italic');
+
+.MainDiv {
+    margin-top: 65px;
+    padding: 0;
+    
+}
+#Navbar {
+    display: flex;
+    position: fixed;
+    top: 0px;
+    justify-content: space-evenly;
+    height: 40px;
+    background-color: black;
+    line-height: 40px;
+    width: 100vw;
+    margin: 0;
+    transition: top 0.6s;
+}
+
+.Navbar-link {
+    color: white;
+    text-decoration: none;
+    font-family: 'Raleway', serif;
+    font-size: 13px;
+    text-decoration: none;
+    letter-spacing: .25px;
+}
+/* a.Navbar-link:active {
+    color: #806aaf;
+} */
+.Footer {
+    display: flex;
+    justify-content: space-around;
+    position: fixed;
+    bottom: 0;
+    font-family: 'Raleway', serif;
+    height: 40px;
+    width: 100vw;
+    background-color: black;
+    color: white;
+    line-height: 40px;
+    margin-bottom: 0px;
+    font-size: 13px;
+    letter-spacing: .25px;
+}
+.FooterDonate {
+    font-family: 'Raleway', serif;
+    display: flex;
+    justify-content: space-around;
+    height: 40px;
+    color: white;
+    line-height: 40px;
+    font-size: 13px;
+    letter-spacing: .25px;
+}
+.logo { 
+    height: 25px;
+    margin: auto 0px;
+}
+a {
+    text-decoration: none;
+}
+.ExhibitionContainer {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    gap: 20px;
+    margin: 15px 25px 0px 25px;
+ 
+}
+.ExhibitDescription {
+    margin: 15px 0px 10px 0px;
+    font-family: 'Lato', serif;
+    color: black;
+    font-size: 12px;
+    line-height: 1.4;
+    display: block;
+    display: -webkit-box;
+    height: 30px;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.ExhibitDescriptionBack {
+    margin: 0px 0px 2px 0px;
+    font-family: 'Lato', serif;
+    color: black;
+    font-size: 13px;
+    line-height: 1.;
+    display: block;
+    display: -webkit-box;
+    height: 35px;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+
+.CurrExhibTitle {
+    font-family: 'Raleway', serif;
+    text-align: center;
+    color: #806aaf;
+    padding: 10px 0px 5px 0px;
+    font-size: 16px;  
+    line-height: 1.4;  
+    display: block;
+    display: -webkit-box;
+    height: 40px;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+
+/* .ExhibitionList:before {
+    content: "";
+    z-index: -1;
+    top: -20px;
+    right: -20px;
+    /* border-radius: 32px; */
+    /* transform: scale(6); */
+    /* transform-origin: 50% 50%; */
+    /* transition: transform 0.2s ease-out; */
+/* } */
+
+.FlipBack{
+    box-shadow: 2px 6px 8px rgba(63, 59, 66, 0.295);
+    border: 2px solid #806aaf;
+    background-color: white;
+    text-align: center;
+    padding: 5px 25px 15px 25px;
+    height: auto;
+    transition: 0.3s;
+}
+.FlipFront {
+    background-color: #eeeeee;
+    padding: 15px 25px 25px 25px;
+    text-align: center;
+    height: 100px;
+    align-content: center;
+    transition: 0.3s;
+}
+.ButtonDetailedInfo {
+    padding: 5px 10px;
+    background-color: #806aaf;
+    color: white;
+    margin-top: 10px;
+    border-radius: 10px;
+    font-size: 12px;
+}
+.ExhibitionLink {
+    color: #606060;
+    font-size: 11px;
+    display: inline-block;
+    overflow: hidden;
+    white-space: nowrap; 
+    max-width: 60%;
+    text-overflow: ellipsis;
+}
+
+.text {
+    margin: 0px;
+}
+.date {
+    display: inline-block;
+    font-family: 'Lato', serif;
+    color: black;
+    font-size: 13px;
+    line-height: 1.8;
+}
+.dateBack {
+    display: inline-block;
+    font-family: 'Lato', serif;
+    color: black;
+    font-size: 13px;
+    line-height: 1.8;
+}
+.pricingHeader {
+    font-family: 'Raleway', serif;
+
+    color: black;
+}
+.price {
+    font-family: 'Lato', serif;
+    color: black;
+}
+.HomeContainer {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    width: 92%;
+    gap: 15px;
+    margin: 10px 25px;
+}
+.HomeHeaderAbout {
+    font-family: 'Raleway', serif;
+    color: black;
+    display: flex;
+    font-size: 24px;
+}
+.HomeDescriptionAbout {
+    font-family: 'Lato', serif;
+    color: black;
+    font-size: 16px;
+    line-height: 1.4;
+}
+.HomeHeaderAddress {
+    font-family: 'Raleway', serif;
+    color: black;
+    margin-top: 10px;
+    margin-bottom: 0px;
+    font-size: 24px;
+}
+.HomeDescriptionAddress {
+    font-family: 'Lato', serif;
+    color: black;
+    font-size: 16px;
+    line-height: 1.4;
+}
+.HomeHeaderTours {
+    font-family: 'Raleway', serif;
+    color: black;
+    margin-top: 10px;
+    margin-bottom: 0px;
+    font-size: 24px;
+}
+.HomeDescriptionTours {
+    font-family: 'Lato', serif;
+    color: black;
+    font-size: 16px;
+    line-height: 1.4;
+}
+.HomeHeaderShop {
+    font-family: 'Raleway', serif;
+    color: black;
+    margin-top: 10px;
+    margin-bottom: 0px;
+    font-size: 24px;
+}
+.HomeDescriptionShop {
+    font-family: 'Lato', serif;
+    color: black;
+    font-size: 16px;
+    line-height: 1.4;
+}
+.HomeHeaderPricing {
+    font-family: 'Raleway', serif;
+    color: black;
+    margin-top: 20px;
+    margin-bottom: -25px;
+    font-size: 24px;
+}
+
+.HomeDescription {
+    font-family: 'Lato', serif;
+    color: black;
+    font-size: 16px;
+    line-height: 1.4;
+}
+.HomeImage {
+    display: block;
+    width: 80vw;
+    margin-top: 15px;
+    margin-bottom: 35px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.HomeHR {
+    margin-top: 15px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%
+}
+th {
+    padding: 10px 10px 10px 5px;
+    font-family: 'Lato', serif;
+    text-align: left;
+    border-bottom: 1px solid black;
+    color: #806aaf;
+    font-size: 14px;
+}
+td {
+    padding: 10px 0px 10px 5px;
+    font-family: 'Lato', serif;
+    text-align: left;
+    border-bottom: 1px solid black;
+    font-size: 14px;
+}
+tr:hover {
+    color: #806aaf
+}
+tr:nth-child(even) {
+    background-color:#f2f2f2
+}
+.table {
+    width: 100%;
+}
+.ExhibitionDetails {
+    margin: 25px;
+    font-family: 'Lato', serif;
+
+}
+.DetailedTitle {
+    color: #806aaf;
+    font-family: 'Raleway', serif;
+    font-size: 22px;
+    margin: 75px 0px 14px 25px;
+}
+.DetailedDescription {
+    line-height: 1.4;
+    font-size: 14px;
+    margin: 35px 0px 14px 25px;
+    width: 80vw;
+    column-count: 2;
+    column-rule: 1px solid grey;
+    column-gap: 50px;
+    text-align: justify;
+    text-justify: inter-word;
+}
+.DetailedLink {
+    margin: 20px 0px 25px 25px;
+    font-size: 14px;
+    font-style: italic;
+}
+.DetailedLinkAtag {
+    color: #606060;
+
+}
+.DetailedDate {
+    margin: 25px 0px 25px 25px;
+    color: #806aaf;
+    font-size: 15px;
+}
+.DetailedHR {
+    margin: 10px;
+    width: 91%
+}
+.RandomObject {
+    margin-top: 75px;
+}
+.RandomObjectTitle {
+    font-family: 'Raleway', serif;
+    color: #806aaf;
+    margin: 10px 25px;
+    font-size: 24px;
+    text-align: center;
+}
+.RandomID {
+    font-family: 'Lato', serif;
+    font-size: 13px;
+    margin: 5px 0px 5px 25px;
+    text-align: center;
+
+}
+.RandomObjectLink {
+    font-family: 'Lato', serif;
+    font-size: 14px;
+    font-style: italic;
+    color: #606060;
+    margin: 20px auto;
+    text-align: center;
+}
+.RandLinktext {
+    color: grey;
+}
+.RandomDescription {
+    font-family: 'Lato', serif;
+    font-size: 15px;
+    margin: 5px 0px 25px 25px;
+    text-align: center;
+    line-height: 1.3;
+}
+.RandomImages {
+    margin: auto;
+    display: block;
+    padding: 5px;
+    width: 85vw;
+}
+.SearchContainer {
+    margin: 15px;
+}
+.SearchHeader {
+    font-family: 'Raleway', serif;
+    color: #806aaf;
+    margin: 75px 25px 5px 25px;
+    font-size: 24px;
+    text-align: center;
+}
+.SearchSuggestions {
+    font-family: 'Lato', serif;
+    font-size: 15px;
+    font-style: italic;
+    color: grey;
+    margin: 20px 25px 5px 25px;
+}
+.SearchResults {
+    font-family: 'Lato', serif;
+    font-size: 15px;
+    color: black;
+    display: block;
+    line-height: 1.5;
+    border-bottom: 2px solid grey;
+    margin: 0px 25px;
+    padding: 25px 0px;
+}
+.SearchForm {
+    text-align: center;
+}
+.SearchButton {
+    padding: 5px 10px;
+    background-color: #806aaf;
+    color: white;
+    margin-top: 10px;
+    border-radius: 10px;
+    font-size: 12px;
+}
+.SearchInput {
+    height: 40px;
+    width: auto;
+    font-size: 13px;
+    margin: 10px 25px 25px 25px;
+    padding: 5px;
+}
+@media screen and (min-width: 650px) {
+    .ExhibitionContainer {
+        display: grid;
+        /* width: 100vw;  */
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto;
+        gap: 25px;
+    }
+    .HomeContainer {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 30px 3fr 30px 2fr 30px;
+        row-gap: 40px;
+        column-gap: 75px;
+    }
+    hr {
+        display: none;
+    }
+    .HomeHeaderAbout {
+        grid-column: 1/2;
+        grid-row: 1/2;
+        margin: 15px 0px 0px 0px;
+    }
+    .HomeDescriptionAbout {
+        grid-column: 1/2;
+        grid-row: 2/3;
+        text-align: justify;
+    }
+    .HomeHeaderAddress {
+        grid-column: 2/3;
+        grid-row: 1/2;
+        margin: 15px 0px 0px 0px;
+    }
+    .HomeDescriptionAddress {
+        grid-column: 2/3;
+        grid-row: 2/3;
+        text-align: justify;
+    }
+    .HomeHeaderTours {
+        grid-column: 1/2;
+        grid-row: 3/4;
+        margin: 15px 0px 0px 0px;
+    }
+    .HomeDescriptionTours {
+        grid-column: 1/2;
+        grid-row: 4/5;
+        text-align: justify;
+    }
+    .HomeHeaderShop {
+        grid-column: 2/3;
+        grid-row: 3/4;
+        margin: 15px 0px 0px 0px;
+    }
+    .HomeDescriptionShop {
+        grid-column: 2/3;
+        grid-row: 4/5;
+        text-align: justify;
+    }
+    .HomeHeaderPricing {
+        grid-column: 1/-1;
+        grid-row: 5/6;
+        margin: 35px 0px 0px 0px;
+    }
+    .PricingTable {
+        grid-column: 1/3;
+        grid-row: 6/7;
+    }
+    .DetailedTitle {
+        font-size: 24px;
+        margin: 75px 0px 14px 25px;
+        text-align: center;
+    }
+    .DetailedDescription {
+        line-height: 1.5;
+        font-size: 15px;
+        width: 87vw;
+        column-gap: 75px;  
+    }
+    .DetailedLink {
+        color: #606060;
+        margin: 20px 0px 25px 25px;
+        font-size: 14px;
+        font-style: italic;
+        text-align: center;
+    }
+    .DetailedDate {
+        margin: 45px 0px 25px 25px;
+        color: #806aaf;
+        font-size: 15px;
+        text-align: center;
+    }
+    .DetailedHR {
+        margin: 10px;
+        width: 91%
+    }
+    .RandomObject {
+        margin-top: 75px;
+    }
+    .RandomObjectTitle {
+        margin: 10px 25px;
+        font-size: 25px;
+    }
+    .RandomID {
+        font-size: 15px;
+        margin: 10px 0px 5px 25px;    
+    }
+    .RandomObjectLink {
+        font-size: 16px;
+        color: #606060;
+    }
+    .RandLinktext {
+        color: grey;
+    }
+    .RandomDescription {
+        font-size: 16px;
+        margin: 35px 0px 35px 25px;
+        padding: 0px 55px;
+        line-height: 1.4;
+    }
+    .SearchHeader {
+        font-size: 25px;
+    }
+    .SearchSuggestions {
+        font-size: 16px;
+        color: grey;
+        margin: 20px 25px 5px 25px;
+    }
+    .SearchResults {
+        font-size: 17px;
+        border-bottom: 3px solid grey;
+    }
+    
+}
+
+@media screen and (min-width: 1000px) {
+    .ExhibitionContainer {
+        display: grid;
+        /* width: 92vw; */
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: auto; 
+        gap: 15px; 
+    }
+}

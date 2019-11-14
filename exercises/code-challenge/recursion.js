@@ -23,9 +23,32 @@ const house = [
 
 // first: fill cell with an X. Then call same function on all cells surrounding (top, left, right, bottom)
 
+// function fillAndCheckSurroundings(x, y){
+//     house[x][y] = 'x'
+//     if(house[x - 1][y] ===' '){
+//         fillAndCheckSurroundings(x - 1, y)
+//     }
+//     if(house[x + 1][y] ===' '){
+//         fillAndCheckSurroundings(x + 1, y)
+//     }
+//     if(house[x][y - 1] ===' '){
+//         fillAndCheckSurroundings(x, y - 1) 
+//     }
+//     if(house[x][y + 1] ===' '){
+//         fillAndCheckSurroundings(x, y + 1)
+//     }
+//         return house
+// }
+// console.log(fillAndCheckSurroundings(1,9))
 function fillAndCheckSurroundings(x, y){
-    // for(let i = 0; i < checkCell.length; i++){
-    //     for(let j = 0; j < )
-    // }
-
+if (house[y][x] === ' ' && x >= 0 && x <= house[y].length && y >= 0 && y <= house.length) {
+    house[y][x] = 'X';
+    fillAndCheckSurroundings(x+1,y);
+    fillAndCheckSurroundings(x-1,y);
+    fillAndCheckSurroundings(x,y+1);
+    fillAndCheckSurroundings(x,y-1);
+  }
+  return house
 }
+
+console.log(fillAndCheckSurroundings(8,3))
