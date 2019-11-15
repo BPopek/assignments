@@ -1,58 +1,13 @@
-import React, {Component} from 'react';
-import {Link} from 'react-router-dom';
-import {withExhibitions} from './ExhibitionProvider';
+import React, { Component } from 'react';
+import { NavLink } from 'react-router-dom';
+import { withExhibitions } from './ExhibitionProvider';
 
 class Navbar extends Component {
     constructor(props){
         super()
-        this.state = {
-            active: ''
-        }
-        this.handleClick = this.handleClick.bind(this)
     }
-    handleClick = e => {
-        this.setState({
-            active: e.target.innerHTML
-        })
-    }
-    render(){
-        let homeStyle;
-        let currentStyle;
-        let pastStyle;
-        let randomStyle;
-        let searchStyle;
 
-        if (this.state.active === 'home') {
-            homeStyle = {color: '#806aaf'}
-            currentStyle = {color: 'white'}
-            pastStyle = {color: 'white'}
-            randomStyle = {color: 'white'}
-            searchStyle = {color: 'white'}
-        } else if (this.state.active === 'current-exhibitions') {
-            currentStyle = {color: '#806aaf'}
-            homeStyle = {color: 'white'}
-            pastStyle = {color: 'white'}
-            randomStyle = {color: 'white'}
-            searchStyle = {color: 'white'}
-        } else if (this.state.active === 'past-exhibitions') {
-            pastStyle = {color: '#806aaf'}
-            currentStyle = {color: 'white'}
-            homeStyle = {color: 'white'}
-            randomStyle = {color: 'white'}
-            searchStyle = {color: 'white'}
-        } else if (this.state.active === 'random-object') {
-            randomStyle = {color: '#806aaf'}
-            currentStyle = {color: 'white'}
-            pastStyle = {color: 'white'}
-            homeStyle = {color: 'white'}
-            searchStyle = {color: 'white'}
-        } else if (this.state.active === 'search') {
-            searchStyle = {color: '#806aaf'}
-            currentStyle = {color: 'white'}
-            pastStyle = {color: 'white'}
-            randomStyle = {color: 'white'}
-            homeStyle = {color: 'white'}
-        }
+    render(){
 
         let prevScrollpos = window.pageYOffset;
         window.onscroll = function() {
@@ -67,11 +22,11 @@ class Navbar extends Component {
         return(
             <div id='Navbar'>
                 <img src='/images/cooper-hewitt-logo.svg' className='logo' alt='logo'/>
-                <Link to="/" className='Navbar-link' style={homeStyle} >Home</Link>
-                <Link to="/current-exhibitions" className='Navbar-link' style={currentStyle} >Current Exhibitions</Link>
-                <Link to="/past-exhibitions" className='Navbar-link' style={pastStyle} >Past Exhibitions</Link>
-                <Link to="/random-object" onClick={this.props.randomObject} className='Navbar-link' style={randomStyle} >Random Find</Link>
-                <Link to="/search"  className='Navbar-link' style={searchStyle} >Search</Link>
+                <NavLink exact to="/" className='Navbar-link' activeClassName='Navbar-link-active'>Home</NavLink>
+                <NavLink exact to="/current-exhibitions" className='Navbar-link' activeClassName='Navbar-link-active'>Current Exhibitions</NavLink>
+                <NavLink exact to="/past-exhibitions" className='Navbar-link' activeClassName='Navbar-link-active'>Past Exhibitions</NavLink>
+                <NavLink exact to="/random-object" onClick={this.props.randomObject} className='Navbar-link' activeClassName='Navbar-link-active'>Random Find</NavLink>
+                <NavLink exact to="/search" className='Navbar-link' activeClassName='Navbar-link-active'>Search</NavLink>
             </div>
         )
     }

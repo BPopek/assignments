@@ -6,7 +6,7 @@ class ExhibitionDetails extends Component {
         this.props.singleExhibition(this.props.match.params.id)
     }
     render(){
-        const {title, url, text, date_start, date_end, images} = this.props.detail
+        const {title, url, text, date_start, date_end} = this.props.detail
 
         return(
             <div className='ExhibitionDetails' >

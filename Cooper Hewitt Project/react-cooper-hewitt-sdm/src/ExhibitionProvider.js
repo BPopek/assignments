@@ -35,47 +35,51 @@ class ExhibitionProvider extends Component {
         }
     }
     getExhibitions = () => {
-        axios.get('https://api.collection.cooperhewitt.org/rest/?method=cooperhewitt.exhibitions.getList&access_token=df5560cefa01711f7f03b561eb43f675').then(res => { 
+        return axios.get('https://api.collection.cooperhewitt.org/rest/?method=cooperhewitt.exhibitions.getList&access_token=16c4567f85b502f1f7c5020e881443f0').then(res => { 
             // console.log(res.data.exhibitions)
             this.setState({currentExhibitions: res.data.exhibitions.filter(exb => exb.is_active === '1'), pastExhibitions: res.data.exhibitions.filter(exb => exb.is_active === '0')})
         })
     }
 
     singleExhibition = (id) => {
-        axios.get('https://api.collection.cooperhewitt.org/rest/?method=cooperhewitt.exhibitions.getInfo&access_token=df5560cefa01711f7f03b561eb43f675&exhibition_id=' + id).then(res => {
+        axios.get('https://api.collection.cooperhewitt.org/rest/?method=cooperhewitt.exhibitions.getInfo&access_token=16c4567f85b502f1f7c5020e881443f0&exhibition_id=' + id).then(res => {
             // console.log(res.data)
             this.setState({detail: res.data.exhibition})
         })
     }
 
     searchDetailObject = (id) => {
-        axios.get('https://api.collection.cooperhewitt.org/rest/?method=cooperhewitt.objects.getInfo&access_token=df5560cefa01711f7f03b561eb43f675&object_id=' + id).then(res => {
+        axios.get('https://api.collection.cooperhewitt.org/rest/?method=cooperhewitt.objects.getInfo&access_token=16c4567f85b502f1f7c5020e881443f0&object_id=' + id).then(res => {
             // console.log(res.data)
             this.setState({searchDetail: res.data.object})
         })
     }
 
     randomObject = () => {
-        axios.get('https://api.collection.cooperhewitt.org/rest/?method=cooperhewitt.objects.getRandom&access_token=df5560cefa01711f7f03b561eb43f675&has_image=1').then(res => {
+        return axios.get('https://api.collection.cooperhewitt.org/rest/?method=cooperhewitt.objects.getRandom&access_token=16c4567f85b502f1f7c5020e881443f0&has_image=1').then(res => {
             // console.log(res.data.object.images)
             this.setState({random: res.data.object})
         })
     }
 
     // searchCollection = (query, description, title, type) => {
-    //     axios.get(`https://api.collection.cooperhewitt.org/rest/?method=cooperhewitt.search.collection&access_token=df5560cefa01711f7f03b561eb43f675&query=${query}&description=${description} &title=${title} &type=${type}`).then(res => {
+    //     axios.get(`https://api.collection.cooperhewitt.org/rest/?method=cooperhewitt.search.collection&access_token=16c4567f85b502f1f7c5020e881443f0&query=${query}&description=${description} &title=${title} &type=${type}`).then(res => {
     //         console.log(res.data)
     //         this.setState({search: res.data.object})
     //     })
     // }
     searchCollection = (query) => {
         // console.log(query)
-        axios.get(`https://api.collection.cooperhewitt.org/rest/?method=cooperhewitt.search.collection&access_token=df5560cefa01711f7f03b561eb43f675&query=${query}`).then(res => {
+        return axios.get(`https://api.collection.cooperhewitt.org/rest/?method=cooperhewitt.search.collection&access_token=16c4567f85b502f1f7c5020e881443f0&query=${query}`).then(res => {
             // console.log(res.data)
             this.setState({searchRes: res.data.objects})
         })
     }
-    
+
+    clearResults = () => {
+        this.setState({searchRes: []})
+    }
+
     
     render(){
         return(
@@ -86,6 +90,7 @@ class ExhibitionProvider extends Component {
                 randomObject: this.randomObject,
                 searchCollection: this.searchCollection,
                 searchDetailObject: this.searchDetailObject,
+                clearResults: this.clearResults,
                 }}>
                 {this.props.children}
             </Provider>

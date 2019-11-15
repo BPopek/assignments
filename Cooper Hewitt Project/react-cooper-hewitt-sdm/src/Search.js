@@ -1,6 +1,8 @@
 import React, {Component} from 'react';
 import {withExhibitions} from './ExhibitionProvider';
 import SearchContainer from './SearchContainer'
+import Loader from 'react-loader-spinner'
+
 
 class Search extends Component {
     constructor(){
@@ -13,16 +15,15 @@ class Search extends Component {
     handleSubmit = e => {
         e.preventDefault()
         this.props.searchCollection(this.state.query)
-        // console.log(this.state)
     }
 
     handleChange = e => {
         e.preventDefault()
         this.setState({[e.target.name]: e.target.value})
+        this.props.clearResults()
     }
     
     render (){
-        // console.log(`render ${this.state.query}`)
         return(
             <div className='Search'>
                 <form onSubmit={this.handleSubmit} className='SearchForm'>
@@ -31,10 +32,10 @@ class Search extends Component {
                     <input onChange={this.handleChange} type='text' name="query" className='SearchInput' placeholder='Enter Info Here'></input>
                     <button className='SearchButton'>Submit</button>
                 </form>
-                <div>
-                    <SearchContainer />
+               
+                        <SearchContainer />
+                    
                 </div>
-            </div>
         )
     }
 }

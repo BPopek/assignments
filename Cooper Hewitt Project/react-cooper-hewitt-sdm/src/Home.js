@@ -17,9 +17,9 @@ function Home (){
                     <hr className='HomeHR'/>
                 <h1 className='HomeHeaderAddress'>MUSEUM ADDRESS</h1>
                 <p className='HomeDescriptionAddress'>
-                2 East 91st Street
+                <a href='https://www.google.com/maps/place/2+E+91st+St,+New+York,+NY+10128/@40.7842946,-73.9600066,17z/data=!3m1!4b1!4m5!3m4!1s0x89c258a2430dad87:0xae679017aaa7da76!8m2!3d40.7842946!4d-73.9578179' className='MapLink'>2 East 91st Street
                 (between 5th Avenue and Madison Avenue),  
-                New York, NY 10128.
+                New York, NY 10128.</a>
                     <br/>
                     <br/>
                 {/* </p>
@@ -68,8 +68,7 @@ function Home (){
                         <td>Free</td>
                     </tr>
                     <tr>
-                        <td>Members
-                    (Cooper Hewitt and Smithsonian Members)	No need to book in advance.</td>	
+                        <td>Cooper Hewitt and Smithsonian Members: no need to book in advance.</td>	
                         <td>Free</td>
                         <td>Free</td>
                     </tr>

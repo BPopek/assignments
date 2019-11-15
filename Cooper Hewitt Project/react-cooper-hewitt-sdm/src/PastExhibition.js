@@ -18,7 +18,7 @@ class PastExhibitions extends Component {
     }
     
     render(){
-        const {title, url, text, date_start, date_end, id} = this.props.info
+        const {title, text, date_start, date_end, id} = this.props.info
         return(
             <div className='ExhibitionList'>
                 <ReactCardFlip isFlipped={this.state.isFlipped}flipDirection="horizontal" flipSpeedBackToFront='.3' flipSpeedFrontToBack='.3'>
@@ -26,14 +26,13 @@ class PastExhibitions extends Component {
                         <h1 className='CurrExhibTitle'>{title}</h1>
                         <h5 className='date'>Start Date: {date_start} <br/>End Date: {date_end}</h5>
                     </div>
-                        {/* <Link to={'detailed-exhibitions/' + id}> */}
-                        <div className='FlipBack' onClick={this.handleClick}>
-                            <h1 className='CurrExhibTitle'>{title}</h1>
-                            <div className='ExhibitDescription'>
-                                <p>{text}</p>
-                            </div>
-                            <h5 className='date'>Start Date: {date_start} &emsp; • &emsp;End Date: {date_end}</h5>
-                            <div>
+                    <div className='FlipBack' onClick={this.handleClick}>
+                                <h1 className='CurrExhibTitleBack'>{title}</h1>
+                                <div>
+                                    <p  className='ExhibitDescriptionBack'>{text}</p>
+                                </div>
+                                {/* <h5 className='dateBack'>Start Date: {date_start} &emsp; • &emsp; End Date: {date_end}</h5> */}
+                                <div>
                                 <Link to={'detailed-exhibitions/' + id}>
                                     <button className='ButtonDetailedInfo'>Exhibition Info</button>
                                 </Link>

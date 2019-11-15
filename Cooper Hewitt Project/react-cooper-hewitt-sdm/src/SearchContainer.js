@@ -4,10 +4,7 @@ import {Link} from 'react-router-dom'
 
 class SearchContainer extends Component {
   
-
     render(){
-        // console.log(this.props)
-        // const {id} = this.props.searchRes
 
         const SearchMap = this.props.searchRes.map(result => <Link className='SearchResults' to={'/search-detail-page/' + result.id} key={result.id}>{result.title} &emsp; ID: {result.id}</Link>)
   
