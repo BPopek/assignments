@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import {withExhibitions} from './ExhibitionProvider';
 // import {Link} from 'react-router-dom'
+import ModalImage from 'react-modal-image';
 
 class RandomObject extends Component {
     
@@ -38,7 +39,7 @@ class RandomObject extends Component {
         return(
             <div className='RandomObject'>
                 <h1 className='RandomObjectTitle'>{title}</h1>
-                <hr className='DetailedHR'/>
+                <hr className='RandomHR'/>
                 <h5 className='RandomID'>Object ID: {id}</h5>
                 <p className='RandomObjectLink'>
                     <a href={url} className='RandLinktext'>Visit Cooper Hewitt Website</a>

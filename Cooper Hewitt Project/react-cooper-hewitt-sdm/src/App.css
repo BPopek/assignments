@@ -327,7 +327,7 @@ tr:nth-child(even) {
     margin: 35px 0px 14px 25px;
     width: 80vw;
     column-count: 2;
-    column-rule: 1px solid grey;
+    column-rule: 1px solid #606060;
     column-gap: 50px;
     text-align: justify;
     text-justify: inter-word;
@@ -376,7 +376,7 @@ tr:nth-child(even) {
     text-align: center;
 }
 .RandLinktext {
-    color: grey;
+    color: #606060;
 }
 .RandomDescription {
     font-family: 'Lato', serif;
@@ -385,11 +385,15 @@ tr:nth-child(even) {
     text-align: center;
     line-height: 1.3;
 }
+.RandomHR {
+    margin: 10px;
+    width: 91%
+}
 .RandomImages {
     margin: auto;
     display: block;
     padding: 5px;
-    width: 85vw;
+    width: 70vw;
 }
 .SearchContainer {
     margin: 15px;
@@ -405,7 +409,7 @@ tr:nth-child(even) {
     font-family: 'Lato', serif;
     font-size: 15px;
     font-style: italic;
-    color: grey;
+    color: #606060;
     margin: 20px 25px 5px 25px;
 }
 .SearchResults {
@@ -414,7 +418,7 @@ tr:nth-child(even) {
     color: black;
     display: block;
     line-height: 1.5;
-    border-bottom: 2px solid grey;
+    border-bottom: 2px solid #606060;
     margin: 0px 25px;
     padding: 25px 0px;
 }
@@ -436,6 +440,51 @@ tr:nth-child(even) {
     margin: 10px 25px 25px 25px;
     padding: 5px;
 }
+.SearchedObject {
+    margin-top: 75px;
+}
+.SearchedTitle {
+    font-family: 'Raleway', serif;
+    color: #806aaf;
+    margin: 10px 25px;
+    font-size: 24px;
+    text-align: center;
+}
+.SearchedID {
+    font-family: 'Lato', serif;
+    font-size: 13px;
+    margin: 5px 0px 5px 25px;
+    text-align: center;
+
+}
+.SearchedLink {
+    font-family: 'Lato', serif;
+    font-size: 14px;
+    font-style: italic;
+    color: #606060;
+    margin: 20px auto;
+    text-align: center;
+}
+.SearchedLinkText {
+    color: #606060;
+}
+.SearchedDescription {
+    font-family: 'Lato', serif;
+    font-size: 15px;
+    margin: 5px 0px 25px 25px;
+    text-align: center;
+    line-height: 1.3;
+}
+.SearchedHR {
+    margin: 10px;
+    width: 91%
+}
+.SearchedImages {
+    margin: auto;
+    display: block;
+    padding: 5px;
+    width: 70vw;
+}
 @media screen and (min-width: 650px) {
     .ExhibitionContainer {
         display: grid;
@@ -451,7 +500,7 @@ tr:nth-child(even) {
         row-gap: 40px;
         column-gap: 75px;
     }
-    hr {
+    .HomeHR {
         display: none;
     }
     .HomeHeaderAbout {
@@ -547,7 +596,7 @@ tr:nth-child(even) {
         color: #606060;
     }
     .RandLinktext {
-        color: grey;
+        color: #606060;
     }
     .RandomDescription {
         font-size: 16px;
@@ -555,19 +604,58 @@ tr:nth-child(even) {
         padding: 0px 55px;
         line-height: 1.4;
     }
+    .RandomImages {
+        padding: 5px;
+        width: 50vw;
+        margin-bottom: 75px;
+    }
+    .RandomHR {
+        width: 97%
+    }
     .SearchHeader {
         font-size: 25px;
     }
     .SearchSuggestions {
         font-size: 16px;
-        color: grey;
+        color: #606060;
         margin: 20px 25px 5px 25px;
     }
     .SearchResults {
         font-size: 17px;
-        border-bottom: 3px solid grey;
+        border-bottom: 3px solid #606060;
     }
-    
+    .SearchObject {
+        margin-top: 75px;
+    }
+    .SearchedtTitle {
+        margin: 10px 25px;
+        font-size: 25px;
+    }
+    .SearchedID {
+        font-size: 15px;
+        margin: 10px 0px 5px 25px;    
+    }
+    .SearchedLink {
+        font-size: 16px;
+        color: #606060;
+    }
+    .SearchedLinkText {
+        color: #606060;
+    }
+    .SearchedDescription {
+        font-size: 16px;
+        margin: 35px 0px 35px 25px;
+        padding: 0px 55px;
+        line-height: 1.4;
+    }
+    .SearchedImages {
+        padding: 5px;
+        width: 50vw;
+        margin-bottom: 75px;
+    }
+    .SearchedHR {
+        width: 97%
+    }
 }
 
 @media screen and (min-width: 1000px) {
@@ -576,6 +664,77 @@ tr:nth-child(even) {
         /* width: 92vw; */
         grid-template-columns: 1fr 1fr 1fr;
         grid-template-rows: auto; 
-        gap: 15px; 
+        gap: 50px; 
+    }
+    .HomeContainer {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 30px 3fr 30px 2fr 30px;
+        row-gap: 40px;
+        column-gap: 75px;
+    }
+    .HomeHR {
+        display: none;
+    }
+    .DetailedTitle {
+        font-size: 26px;
+    }
+    .DetailedDescription {
+        line-height: 1.5;
+        font-size: 17px;
+        width: 87vw;
+        column-gap: 75px;  
+    }
+    .DetailedLink {
+        color: #606060;
+        font-size: 16px;
+    }
+    .DetailedDate {
+        margin: 45px 0px 85px 25px;
+        font-size: 17px;
+    }
+    .DetailedHR {
+        margin: 10px;
+        width: 91%
+    }
+    .RandomObjectTitle {
+        font-size: 26px;
+    }
+    .RandomID {
+        font-size: 16px;
+    }
+    .RandomObjectLink {
+        font-size: 16px;
+    }
+    .RandomDescription {
+        font-size: 17px;
+    }
+    .RandomHR {
+        width: 98%
+    }
+    .SearchHeader {
+        font-size: 26px;
+    }
+    .SearchSuggestions {
+        font-size: 17px;
+        margin: 20px 25px 5px 25px;
+    }
+    .SearchResults {
+        font-size: 17px;
+    }
+    .SearchedTitle {
+        font-size: 26px;
+    }
+    .SearchedID {
+        font-size: 16px;
+    }
+    .SearchedLink {
+        font-size: 16px;
+    }
+    .SearchedDescription {
+        font-size: 17px;
+    }
+    .SearchedHR {
+        width: 98%
     }
 }

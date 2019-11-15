@@ -39,24 +39,28 @@ class SearchDetailPage extends Component {
         return(
                 <div className='SearchObject'>
                     <h1 className='SearchedTitle'>{title}</h1>
-                    <a href={url} className='ExhibitionLink'>Visit Cooper Hewitt Website</a>
-                    <p className='ExhibitDescription'>{description}</p>
-                    <img src={myPic} className='DetailedImages' alt='DetailedImages'/>
+                    <hr className='SearchedHR'/>
+                    <h5 className='SearchedID'>Object ID: {id}</h5>
+                    <p className='SearchedLink'>
+                        <a href={url} className='SearchedLinkText'>Visit Cooper Hewitt Website</a>
+                        </p>
+                    <p className='SearchedDescription'>{description}</p>
+                    <img src={myPic} className='SearchedImages' alt='SearchedImages'/>
                     {
                         myPic1 ? 
-                        <img src={myPic1} className='DetailedImages' alt='DetailedImages'/>
+                        <img src={myPic1} className='SearchedImages' alt='SearchedImages'/>
                         :
                         <div></div>
                     }
                     {
                         myPic2 ? 
-                        <img src={myPic2} className='DetailedImages' alt='DetailedImages'/>
+                        <img src={myPic2} className='SearchedImages' alt='SearchedImages'/>
                         :
                         <div></div>
                     }
                     {
                         myPic3 ? 
-                        <img src={myPic3} className='DetailedImages' alt='DetailedImages'/>
+                        <img src={myPic3} className='SearchedImages' alt='SearchedImages'/>
                         :
                         <div></div>
                     }
