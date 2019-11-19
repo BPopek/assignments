@@ -73,9 +73,5 @@ export default withExhibitions(RandomObject);
 
 
 
-// getExhibitions = () => {
-//     axios.get('https://api.collection.cooperhewitt.org/rest/?method=cooperhewitt.exhibitions.getList&access_token=df5560cefa01711f7f03b561eb43f675').then(res => { 
-//         // console.log(res.data.exhibitions)
-//         this.setState({currentExhibitions: res.data.exhibitions.filter(exb => exb.is_active === '1'), pastExhibitions: res.data.exhibitions.filter(exb => exb.is_active === '0')})
-//     })
-// }
+// <img src='/images/cooper-hewitt-logo.svg' className='logo' alt='logo'/>
+//                 <NavLink exact to="/" className='Navbar-link' activeClassName='Navbar-link-active'>Home</NavLink>

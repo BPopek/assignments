@@ -1,17 +1,15 @@
 import React, {Component} from 'react'
+import styled from 'styled-components';
 
-class Profile extends Component {
-    constructor(){
-        super()
-    }
 
-    render(){
-        return(
-            <div className='profile'>
-                
-            </div>
-        )
-    }
+function Profile () {
+
+    return(
+        <div className='profile'>
+            <h3>Info about meeeeee</h3>
+        </div>
+    )
 }
+
 
 export default Profile;

@@ -21,8 +21,9 @@ class Navbar extends Component {
         }
         return(
             <div id='Navbar'>
-                <img src='/images/cooper-hewitt-logo.svg' className='logo' alt='logo'/>
-                <NavLink exact to="/" className='Navbar-link' activeClassName='Navbar-link-active'>Home</NavLink>
+                <NavLink exact to="/" className='Navbar-link' activeClassName='logo-active'>
+                    <img src='/images/cooper-hewitt-logo.svg' className='logo' alt='logo'/>
+                </NavLink>      
                 <NavLink exact to="/current-exhibitions" className='Navbar-link' activeClassName='Navbar-link-active'>Current Exhibitions</NavLink>
                 <NavLink exact to="/past-exhibitions" className='Navbar-link' activeClassName='Navbar-link-active'>Past Exhibitions</NavLink>
                 <NavLink exact to="/random-object" onClick={this.props.randomObject} className='Navbar-link' activeClassName='Navbar-link-active'>Random Find</NavLink>

@@ -1,11 +1,20 @@
 import React, {Component} from 'react';
 import './App.css';
 import {Switch, Route} from 'react-router-dom'
-import UXDesign from './UXDesign';
+import styled from 'styled-components';
+import GlobalStyles from './GlobalStyles'
+import UXDesignContainer from './UXDesignContainer';
 import Home from './Home';
-import WebDesign from './WebDesign';
-import GraphicDesign from './GraphicDesign';
+import WebDesignContainer from './WebDesignContainer';
+import GraphicDesignContainer from './GraphicDesignContainer';
 import Profile from './Profile';
+import Navbar from './Navbar';
+import Footer from './Footer';
+
+
+// const HomeGrid = styled.div`
+// `
+
 
 class App extends Component {
   constructor(){
@@ -14,14 +23,15 @@ class App extends Component {
   render(){
     return (
       <div className="App">
+        <GlobalStyles />
         <Navbar />
-          <Switch>
-            <Route exact path='/' component={Home} />
-            <Route path='/web' component={WebDesign} />
-            <Route path='graphic-design' component={GraphicDesign} />
-            <Route Path='ux-design' component={UXDesign} />
-            <Route Path='profile' component={Profile} />
-          </Switch>
+            <Switch>
+              <Route exact path='/' component={Home} />
+              <Route path='/web-design' component={WebDesignContainer} />
+              <Route path='/graphic-design' component={GraphicDesignContainer} />
+              <Route Path='/ux-design' component={UXDesignContainer} />
+              <Route Path='/profile' component={Profile} />
+            </Switch>
         <Footer />
       </div>
     );

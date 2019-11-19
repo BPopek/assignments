@@ -10,7 +10,7 @@ function Footer() {
             </p>
             {/* <p>DONATE LINK</p> */}
             <p>
-                <Link to='https://www.cooperhewitt.org/donate/' className='FooterDonate'>DONATE</Link>
+                <a href='https://www.cooperhewitt.org/donate/' className='FooterDonate'>DONATE</a>
             </p>
         </div>
     )
