@@ -15,6 +15,7 @@ export default createGlobalStyle`
         margin: 0;
         padding: 0;
         font-family: Raleway, sans-serif;
+
     }
     h1 {
         font-family: Montserrat;

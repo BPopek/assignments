@@ -3,15 +3,15 @@ import styled from 'styled-components';
 import CHhome from './images/Web/CHhomepage.png'
 
 const WebDesignCHitem = styled.div`
-    width: 200px;
-    height: 250px;
+    width: 120px;
+    height: 150px;
     background-color: yellow;
     background-image: url(${({background}) => background});
     background-position: center;
     background-size: cover;
-    position: flex;
-    display: inline-block;
-    resize-mode: stretch;
+    display: flex;
+    text-align: center;
+    justify-content: center;
 `
 
 class WebDesignCH extends Component {

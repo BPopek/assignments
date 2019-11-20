@@ -5,14 +5,15 @@ import Waffler from './images/UX/WebsiteUXWaffler.png';
 
 
 const UXProject = styled.div`
-    width: 200px;
-    height: 250px;
+    width: 120px;
+    height: 150px;
     background-color: blue;
     background-image: url(${({background}) => background});
     background-position: center;
     background-size: cover;
-    position: flex;
-    display: inline-block;
+    display: flex;
+    text-align: center;
+    justify-content: center;
 `
 
 class UXDesignWaffler extends Component {

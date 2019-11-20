@@ -20,6 +20,7 @@ const NaviLinks = styled(NavLink)`
     font-weight: 800;
     text-decoration: none;
     color: black;
+    font-size: 14px;
 `
 
 class Navbar extends Component {
