@@ -1,11 +1,11 @@
 import React, {Component} from 'react'
 import styled from 'styled-components';
-import GraphicDesignContainer from './GraphicDesignContainer';
-import UXDesignContainer from './UXDesignContainer';
-import WebDesignContainer from './WebDesignContainer';
 import GraphicDesignShirts from './GraphicDesignShirts';
-import UXDesignWaffler from './UXDesignWaffler';
 import WebDesignCH from './WebDesignCH';
+import Waffler from './images/UX/WebsiteUXWafflerThumb.png';
+import {Link} from 'react-router-dom'
+import CHThumb from './images/Web/CH-Sign-Thumb.jpg'
+
 
 const HomeCont = styled.div`
     display: grid;
@@ -13,22 +13,39 @@ const HomeCont = styled.div`
     margin-right: 25px;
     margin-top: 50px;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 150px 150px 150px 150px;
+    grid-template-rows: 225px 225px 225px 225px;
     row-gap: 25px;
     column-gap: 25px;
     text-align: center;
     justify-items: center;
     align-items: center;
 
-
-    @media (min-width: 650px) {
+    @media (min-width: 550px) {
         grid-template-columns: 1fr 1fr 1fr;
-
+    }
+    @media (min-width: 750px) {
+        grid-template-columns: 1fr 1fr 1fr 1fr ;
+    }
+    @media (min-width: 850px) {
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr ;
     }
     @media (min-width: 1000px) {
-        grid-template-columns: 1fr 1fr 1fr 1fr ;
-
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
     }
+    @media (min-width: 1200px) {
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    }
+`
+const HomeImage = styled.img`
+    width: 150px;
+    height: 200px;
+    background-color: blue;
+    src: url(${({background}) => background});
+    background-position: center;
+    background-size: center;
+    display: flex;
+    text-align: center;
+    justify-content: center; 
 `
 
 class Home extends Component {
@@ -39,9 +56,13 @@ class Home extends Component {
     render(){
         return(
             <HomeCont className='homeContainer'>
-                <WebDesignCH />
+                <Link to="/web-design">
+                    <HomeImage src={CHThumb} ></HomeImage>
+                </Link>
                 <GraphicDesignShirts />
-                <UXDesignWaffler />
+                <Link to="/ux-design">
+                    <HomeImage src={Waffler} ></HomeImage>
+                </Link>
             </HomeCont>
         )
     }

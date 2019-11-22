@@ -10,6 +10,7 @@ import GraphicDesignContainer from './GraphicDesignContainer';
 import Profile from './Profile';
 import Navbar from './Navbar';
 import Footer from './Footer';
+import UXDesignWafflerFullPage from './UXDesignWafflerFullPage';
 
 
 // const HomeGrid = styled.div`
@@ -29,8 +30,12 @@ class App extends Component {
               <Route exact path='/' component={Home} />
               <Route path='/web-design' component={WebDesignContainer} />
               <Route path='/graphic-design' component={GraphicDesignContainer} />
-              <Route Path='/ux-design' component={UXDesignContainer} />
-              <Route Path='/profile' component={Profile} />
+              <Route exact path='/ux-design' component={UXDesignContainer} />
+              <Route exact path='/ux-design/waffler' component={UXDesignWafflerFullPage} />
+              <Route path='/profile' component={Profile} />
+              {/* <Route Path='/ux-design-waffler'>
+                <UXDesignWafflerFullPage />
+              </Route> */}
             </Switch>
         <Footer />
       </div>

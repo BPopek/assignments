@@ -4,6 +4,8 @@ const uuid = require('uuid/v4')
 const PORT = 8000
 
 app.use(express.json())
+
+
 //get collection of all
 app.get('/todo', (req, res) => {
     console.log(req.params)
@@ -22,13 +24,13 @@ app.get('/todo/:_id', (req, res) => {
         res.send(specificToDo)
     })
 
-// POST NEW TODO
+// POST NEW TODO - ERIC
 const todos = []
 app.post('/todo', (req, res) => {
     todos.push({...req.body, _id: uuid()})
     res.send(todos)
 })
-    //or
+    //or NATE's WAY
     app.post('/todo', (req, res) => {
         const newTodo = req.body
         newTodo._id = uuid()
@@ -63,7 +65,7 @@ app.put('/todo/:_id', (req, res) => {
 
 
 
-//DELETE
+//NATE DELETE
 app.delete('/todo/:_id', (req, res) => {
     const todoID = req.params._id
     const todoIndexDelete = todos.findIndex(todo => todo._id === todoID)

@@ -1,0 +1,42 @@
+[
+    {
+        "firstName": "Darth",
+        "lastName": "Vader",
+        "living": true,
+        "bountyAmount": "1000",
+        "typePerson": "Sith",
+        "_id": "23"
+    },
+    {
+        "firstName": "Darth",
+        "lastName": "Maul",
+        "living": true,
+        "bountyAmount": "800",
+        "typePerson": "Sith",
+        "_id": "34"
+    },
+    {
+        "firstName": "Obi-Wan",
+        "lastName": "Kenobi",
+        "living": true,
+        "bountyAmount": "250",
+        "typePerson": "Jedi",
+        "_id": "45"
+    },
+    {
+        "firstName": "Anakin",
+        "lastName": "Skywalker",
+        "living": true,
+        "bountyAmount": "100",
+        "typePerson": "Jedi",
+        "_id": "56"
+    },
+    {
+        "firstName": "Rey",
+        "lastName": "",
+        "living": true,
+        "bountyAmount": "50",
+        "typePerson": "Jedi",
+        "_id": "67"
+    }
+]

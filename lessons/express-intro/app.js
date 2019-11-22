@@ -1,6 +1,7 @@
 const express = require('express')
 const app = express()
 const uuid = require("uuid/v4")
+const mongoose = require('mongoose')
 
 app.use(express.json())
 //parses the json into javascript for you to use
@@ -61,6 +62,24 @@ app.put('/todo/:id', (req, res) => {
     })
     res.send(database)
 })
+
+// QUERY example with class database info
+app.get('/places', (req, res) => {
+    if(req.query.timeToGo){
+        res.send(database.filter(spot => spot.timeToGo === req.query.timeToGo))
+    } else {
+        res.send(database)
+    }
+})
+
+app.get('/todo', (req, res) => {
+    res.send(database)
+})
+
+mongoose.connect('mongodb://localhost:27017/nameofdatabase', {useNewURLParser: true}).then(() => {
+    console.log('Connected to MongoDB')
+})
+
 
 app.listen(PORT, () => {
     console.log('app is running on port ' + PORT)

@@ -1,0 +1,93 @@
+@import url('https://fonts.googleapis.com/css?family=Rye:regular');
+
+.App {
+  margin: auto;
+  width: 100%;
+}
+.BountyMapList {
+  margin: auto;
+  text-align: center;
+}
+.BountyContainer {
+  display: inline-block;
+  width: 300px;
+  background-color: rgb(207, 187, 161);
+  height: auto;
+  margin: 25px 50px 50px 50px;
+  text-align: center;
+}
+.BountyForm {
+  text-align: center;
+}
+.ActiveBounties {
+  text-align: center;
+  margin: 75px auto 10px auto;
+  font-family: 'Rye', serif;
+  border-bottom: darkred 4px solid;
+}
+button {
+  padding: 5px 10px;
+  margin: 10px 10px 25px 10px;
+  border-radius: 5px;
+  border: 0px;
+  box-shadow: 2px 2px 4px grey;
+  background-color: darkred;
+  color: whitesmoke;
+}
+input {
+  padding: 5px 10px;
+  margin: 5px;
+}
+
+.AddBounty {
+  text-align: center;
+  margin: 75px auto 0px auto;
+  color: darkred;
+  font-family: 'Rye', serif;
+  width: 410px;
+  background: rgb(182, 179, 179);
+  padding: 10px 0px;
+}
+form.bounty-submit {
+  text-align: center;
+  margin: auto;
+  width: 400px;
+  background-color: whitesmoke;   
+  padding: 20px 5px;
+  border-bottom: 8px solid darkred;
+}
+.BountyName {
+  background-color: darkred;
+  padding: 10px 0px;
+  margin: 0px;
+  color: whitesmoke;
+  border-bottom: 4px black solid;
+}
+form.edit-bounty {
+  text-align: center;
+  width: auto;
+  height: auto;
+  padding: 20px 5px;
+}
+.formButton {
+  margin: 10px 30px 5px 30px;
+}
+.BountyLabel {
+  color: black;
+  display: inline;
+}
+.BountyLiving {
+  color: darkred;
+  display: inline;
+}
+.BountySpacing {
+  margin-top: 20px;
+}
+.BountyTypePerson {
+  color: darkred;
+  display: inline;
+}
+.BountyPrice {
+  color: green;
+  margin-bottom: 5px;
+}
