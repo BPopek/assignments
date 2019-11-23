@@ -69,11 +69,39 @@
 
 
 // ROUTER
-// name file to be what you are routing to.
-    // in server.js file place this at top:
-        app.use('/places', require('./placesRouter'))
+    // name file to be what you are routing to.
+        // in server.js file place this at top:
+        app.use('/places', require('./routes/placesRouter'))
 
         // can use multiple router files
     // in server.js file place both at top:
-    app.use('/places', require('./placesRouter'))
+    app.use('/places', require('./routes/placesRouter'))
     app.use('/todos', require('./todoRouter'))
+
+
+// MONGOOSE:
+            
+    // Mongoose model is the wrapper for the Schema. Schema defines the structure of the document. Model provides interface to the database for interacting with the Schema.
+
+    // TOP OF MODEL FILE:
+    const mongoose = require('mongoose')
+    const Schema = mongoose.Schema
+
+    // When creating the Schema, make sure the types are capitalized 
+    const placeSchema = new Schema({
+        place: {
+            type: String,
+            required: true,
+            unique: true  //only allows the string to be entered once (can't enter the same location twice)
+        },
+        price: {
+            type: Number,
+            default: 0  //makes it so they don't always have to enter a price but at least the default is always shown
+        },
+        timeToGo: String,
+        sitesToExplore: [Strings],  //put the type of the array items in the brackets (strings, numbers, etc)
+        enum: ['male', 'female', 'other'] //will limit the answer options to only the items in the square brackets
+
+    })
+
+    module.exports = mongoose.model('Place', placeSchema) //("name of model", name of Schema)
