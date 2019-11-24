@@ -56,8 +56,18 @@ bountyRouter.route('/:_id')
     })
 
     //DELETE MONGOOSE
+    // .delete((req, res) => {
+    //     Bounty.findOneAndDelete(
+    //         {id: req.params._id},
+    //         (err, bounty) => {
+    //             if(err) return res.status(500).send(err)
+    //             return res.status(200).send(bounty)
+    //         }
+    //     )
+    // })
+
     .delete((req, res) => {
-        Bounty.findOneAndDelete(
+        Bounty.findByIdAndRemove(
             {id: req.params._id},
             (err, bounty) => {
                 if(err) return res.status(500).send(err)

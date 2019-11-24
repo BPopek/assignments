@@ -18,8 +18,7 @@ class BountyContainer extends Component {
         //                                                                 _id={bounty._id}
         //                                                                 />)
 
-        const mappedBounties = this.props.bounties.map(bounty => <Bounty info={bounty}
-                                                                        />)
+        const mappedBounties = this.props.bounties.map(bounty => <Bounty info={bounty} key={bounty._id}/>)
         return(
             <div className='BountyMapList'>
                 {mappedBounties}

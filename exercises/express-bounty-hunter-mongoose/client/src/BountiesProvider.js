@@ -14,6 +14,7 @@ class BountiesProvider extends Component {
         axios.get('/bounties').then(res => {
             this.setState({bounties:res.data})
         })
+        .catch(err => console.log(err))
     }
 
     handleNewBounty = newBounty => {
@@ -22,20 +23,26 @@ class BountiesProvider extends Component {
                 return {bounties: [...prev.bounties, res.data]}
             })
         })
+        .catch(err => console.log(err))
     }
 
+    // handleEdit = (id, updatedBounty) => {
+    //     axios.put('/bounties/' + id, updatedBounty).then(res => {
+    //         this.setState({ bounties: res.data })
+    //         })  
+    // }
     handleEdit = (id, updatedBounty) => {
         axios.put('/bounties/' + id, updatedBounty).then(res => {
-            this.setState({ bounties: res.data })
+            this.handleGet()
             })  
+            .catch(err => console.log(err))
     }
 
     handleDelete = (id) => {
         axios.delete('/bounties/' + id).then(res => {
-            this.setState(prev => {
-                return {bounties: prev.bounties.filter(bounty => bounty._id !== id)}
-            })
-        })
+            this.handleGet()
+        })  
+        .catch(err => console.log(err))
     }
 
     render(){

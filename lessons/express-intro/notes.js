@@ -80,7 +80,8 @@
 
 
 // MONGOOSE:
-            
+    // TO INSTALL MONGOOSE: npm install --save mongoose.
+    
     // Mongoose model is the wrapper for the Schema. Schema defines the structure of the document. Model provides interface to the database for interacting with the Schema.
 
     // TOP OF MODEL FILE:
