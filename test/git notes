@@ -1,0 +1,30 @@
+don't code when on master
+
+don't code on the same files as anyone else
+    can cause merge conflicts
+
+if you MUST work in the same file, work in different blocks to make it easier to merge.
+
+don't push your branches unless you want your teammates to be able to pull them down. Pull requests will still update your map(?).
+
+
+first: clone from github
+    make a branch for what I'm working on 
+
+checkout branch for what you're working on
+
+do a git commit first from your branch with changes?
+git merge master is to get any updates from github
+
+database:
+game state 
+
+clues, characters in json file
+
+
+use mlab to share database
+
+
+
+make git files to ignore node modules
+when you clone it down, npm i in root and client folders
