@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import styled from 'styled-components';
-import GraphicDesignShirts from './GraphicDesignShirts'
+import GraphicDesign from './GraphicDesign'
 
 
 const GDesignContPage = styled.div`
@@ -29,7 +29,7 @@ class GraphicDesignContainer extends Component {
     render(){
         return(
             <GDesignContPage className='GD'>
-                <GraphicDesignShirts/>
+                <GraphicDesign />
 
             </GDesignContPage>
         )

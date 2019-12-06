@@ -33,6 +33,4 @@ class Navbar extends Component {
     }
 }
 
-
-
 export default withExhibitions(Navbar)

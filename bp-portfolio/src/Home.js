@@ -1,6 +1,6 @@
 import React, {Component} from 'react'
 import styled from 'styled-components';
-import GraphicDesignShirts from './GraphicDesignShirts';
+import GraphicDesignShirts from './GraphicDesign';
 import WebDesignCH from './WebDesignCH';
 import Waffler from './images/UX/WebsiteUXWafflerThumb.png';
 import {Link} from 'react-router-dom'

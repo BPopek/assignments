@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import styled from 'styled-components';
-import Waffler from './images/UX/WebsiteUXWaffler.png';
+import Waffler from './images/UX/WebsiteUXWafflerThumb.png';
 import { NavLink } from 'react-router-dom'
 import WafflerFullPage from './images/UX/WW-Portfolio.jpg';
 

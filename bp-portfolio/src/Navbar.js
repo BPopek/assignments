@@ -21,6 +21,7 @@ const NaviLinks = styled(NavLink)`
     text-decoration: none;
     color: black;
     font-size: 14px;
+    active ? color: black : color: #084a73
 `
 
 class Navbar extends Component {
@@ -31,11 +32,11 @@ class Navbar extends Component {
     render(){
         return(
             <NavbarCont>
-                <NaviLinks exact to='/' className='navbarLink'>Home</NaviLinks>
-                <NaviLinks exact to='/web-design' className='navbarLink'>Web Design</NaviLinks>
-                <NaviLinks exact to='/graphic-design' className='navbarLink'>Graphic Design</NaviLinks>
-                <NaviLinks exact to='/ux-design' className='navbarLink'>UX Design</NaviLinks>
-                <NaviLinks exact to='/profile' className='navbarLink'>Profile</NaviLinks>
+                <NaviLinks exact to='/' className='navbarLink' activeClassName='navbarLinkActive'>Home</NaviLinks>
+                <NaviLinks exact to='/web-design' className='navbarLink'activeClassName='navbarLinkActive'>Web Design</NaviLinks>
+                <NaviLinks exact to='/graphic-design' className='navbarLink'activeClassName='navbarLinkActive'>Graphic Design</NaviLinks>
+                <NaviLinks exact to='/ux-design' className='navbarLink'activeClassName='navbarLinkActive'>UX Design</NaviLinks>
+                <NaviLinks exact to='/profile' className='navbarLink'activeClassName='navbarLinkActive'>Profile</NaviLinks>
             </NavbarCont>
         )
     }
