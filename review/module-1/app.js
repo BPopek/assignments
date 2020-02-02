@@ -171,10 +171,19 @@
 
     // Make a function that takes a string and returns that string where the first half is capitalized, and the second half is lower cased. (If the string length is odd, capitalize the shorter of the first half.)
         
-        // var saying2 = "Hello World"
         // function capitalizeAndLowercaseHalf(str) {
         //     let firstHalf = str.slice(0, str.length / 2)
         //     let secondHalf = str.slice(str.length / 2)
         //     return firstHalf.toUpperCase() + secondHalf.toLowerCase()
         // }
-        // console.log(capitalizeAndLowercaseHalf("Hello World"))
+        // console.log(capitalizeAndLowercaseHalf("Hello"))
+
+        function lessThan100(a, b) {
+            if (a + b) <= 100 {
+                return true
+            } else {
+                return false
+            }
+        }
+        
+        

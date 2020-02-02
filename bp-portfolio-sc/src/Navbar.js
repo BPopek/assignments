@@ -19,7 +19,7 @@ const NaviLinks = styled(NavLink)`
     font-style: normal;
     font-weight: 800;
     text-decoration: none;
-    color: black;
+    color: ${props => (props.primary ? 'black' : '')};
     font-size: 14px;
     active ? color: black : color: #084a73
 `

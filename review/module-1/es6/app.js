@@ -30,9 +30,9 @@ const sum3ES6 = (word, num) => {
 const sum4ES6 = word => console.log(`ES6 is ${word}!`)
 
 // OLD WAY  
-addEventListener("click", function()){
+// addEventListener("click", function()){
 
-}
+// }
 
 // ES6 
 addEventListener("click", () => {
