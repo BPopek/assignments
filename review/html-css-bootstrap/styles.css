@@ -1,3 +1,49 @@
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700|Unica+One&display=swap');
+
 .bookingbutton {
     border: none !important;
+}
+.navnewcolor {
+    background-color: black;
+    color: #b8b8b8;
+    border-radius: 0;
+    margin: 0;
+    font-family: 'Unica One';
+    font-size: 18px;
+    padding: 20px 10px;
+}
+.navlinkcolor {
+    background-color: #FF9533;
+    padding: 5px 0px 5px 15px;
+    font-family: 'Unica One';
+    font-size: 18px;
+    color: black;
+}
+.navlinkcolor:hover {
+    background-color: #FF9533;
+    padding: 5px 0px 5px 15px;
+    font-family: 'Unica One';
+    font-size: 18px;
+    color: white;
+}
+.dropdown:hover>.dropdown-menu {
+    display: block;
+}
+.dropdown>.dropdown-toggle:active {
+      pointer-events: none;
+  }
+.dropdown-menu {
+    padding: 0;
+    margin: 0;
+    width: 120px;
+    min-width: 0px !important;
+}
+/* .div.dropdown-menu {
+    width: 120px;
+} */
+.dropdown {
+    width: 100%;
+}
+.dropdown-item.navlinkcolor {
+    width: 120px;
 }
